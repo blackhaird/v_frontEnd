@@ -1,0 +1,9 @@
+a{
+    color: var(--a-normal-gray);
+    font-weight: bold;
+    text-decoration:none;
+    transition: 0.1s;
+}
+a:hover{
+    color: var(--font_black);
+}

@@ -1,0 +1,11 @@
+*{
+    font-family: 小米兰亭;
+}
+body{
+    background: var(--bg_white);
+}
+
+.bold_font{
+    font-weight: bold;
+    font-size: 30px;
+}
