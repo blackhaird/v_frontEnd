@@ -22,8 +22,8 @@
         </div>
 
         <div class="col display_center">
-          <Welcome_login_panel @registerPanel_show="get_registerPanel_show"></Welcome_login_panel>
-          <Welcome_register_panel v-show="registerPanel_show_value" ></Welcome_register_panel>
+          <Welcome_login_panel @registerPanel_show="get_registerPanel_show" v-show="loginPanel_show_value"></Welcome_login_panel>
+          <Welcome_register_panel @loginPanel_show = "get_loginPanel_show" v-show="registerPanel_show_value" ></Welcome_register_panel>
         </div>
       </div>
 
@@ -35,6 +35,7 @@
 <script>
 import Welcome_login_panel from "@/welcome_page/src/components/Welcome_login_panel.vue";
 import Welcome_register_panel from "@/welcome_page/src/components/Welcome_register_panel.vue";
+import {ref} from "vue";
 export default {
   name: "welcomeApp",
   components:{
@@ -42,15 +43,31 @@ export default {
     Welcome_register_panel,
   },
   setup(){
-    const registerPanel_show_value = false;
-    const get_registerPanel_show=(val)=>{
-      console.log(val)
-      registerPanel_show_value === val;
+    const loginPanel_show_value = ref(true);
+    const registerPanel_show_value = ref(false);
+
+
+    const get_registerPanel_show=(isShow_value)=>{
+      console.log("get_registerPanel_show 函数被触发,申请显示页面register 结果为："+isShow_value)
+      registerPanel_show_value.value = isShow_value;
+      loginPanel_show_value.value = !isShow_value;
     }
-    console.log(registerPanel_show_value)
+
+    const get_loginPanel_show=(isShow_value)=>{
+      console.log("get_registerPanel_show 函数被触发,申请显示页面login 结果为："+isShow_value)
+      loginPanel_show_value.value = isShow_value;
+      registerPanel_show_value.value = !isShow_value;
+    }
+
     return{
+      //value
       registerPanel_show_value,
-      get_registerPanel_show
+      loginPanel_show_value,
+
+      //funtion
+      get_registerPanel_show,
+      get_loginPanel_show,
+
     }
   }
 }

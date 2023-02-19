@@ -2,7 +2,7 @@
     font-family: 小米兰亭;
 }
 body{
-    background: var(--bg_white);
+    background: var(--color-bg_white);
 }
 
 .bold_font{

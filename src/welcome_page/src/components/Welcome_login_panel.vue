@@ -32,7 +32,6 @@ export default {
 
     const changePanel_to_register =() =>{
       console.log("changePanel_to_register 函数被触发")
-      console.log()
       context.emit('registerPanel_show',true)
     }
 
@@ -49,12 +48,12 @@ export default {
 #div_login_panel {
   margin-top: 2.5%;
   float: right;
-  width: 30rem;
-  height: 30rem;
-  background: var(--div_white);
+  width: var(--area-Welcome-panel-width);
+  height: var(--area-Welcome-panel-height-login);
+  background: var(--color-div_white);
   text-align: center;
   border-radius: 10px;
-  box-shadow: var(--box-shadow-blue) 0 0 40px 30px;
+  box-shadow: var(--color-box-shadow-blue) 0 0 40px 30px;
 }
 .font_top {
   width: 50%;
@@ -63,26 +62,8 @@ export default {
   margin-top: 3vh;
   margin-bottom: 3vh;
   font-weight: bold;
-  font-size: 30px;
-  border-bottom: 2px var(--button_color_blue) solid;
+  font-size: var(--fontSize-Welcome-panel-top);
+  border-bottom: 2px var(--color-button_color_blue) solid;
 }
-.double_ended_line{
-  color: red;
-  text-align: center;
-  font-size: 16px;
-}
-.double_ended_line:before,
-.double_ended_line:after{
-  content: "";
-  width: 150px;
-  border-top: 1px red solid;
-  display: inline-block;
-  vertical-align: middle;
-}
-.double_ended_line:before{
-  margin-right: 10px;
-}
-.double_ended_line:after{
-  margin-left: 10px;
-}
+
 </style>

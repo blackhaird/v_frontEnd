@@ -30,7 +30,7 @@ input:hover{
   border: 1.5px solid #f3f3f4;
 }
 input::placeholder{
-  color: var(--font_gray);
+  color: var(--color-font_gray);
 }
 input:focus {
   border: 1.5px solid #5359fd;
@@ -40,7 +40,7 @@ input:focus {
   height: 60px;
   background: #f7f7f9;
   font-size: 20px;
-  color: var(--font_black);
+  color: var(--color-font_black);
   border-radius: 7px;
   border: 0;
   transition: 0.3s;

@@ -1,14 +1,15 @@
 <template>
   <div id="div_login_panel">
-    <div class="font_top">第二面部</div>
+    <div class="font_top">注册账号</div>
     <X_input :input-value="inputValue_userid"></X_input>
     <br><br>
     <X_input :input-value="inputValue_password"></X_input>
     <br><br>
-
+    <X_input :input-value="inputValue_password_again"></X_input>
+    <br><br>
     <span class="row">
-              <a class="col" href="welcome.vue">忘记密码</a>
-              <a class="col">注册账号</a>
+              <a class="col" href="">忘记密码</a>
+              <a class="col" @click="changePanel_to_login">返回登录</a>
             </span><br><br>
     <!--            <span class="col double_ended_line ">点击</span><br><br>-->
     <X_button class="col"></X_button>
@@ -25,14 +26,21 @@ export default {
     X_input,
     X_button
   },
-  setup(){
+  setup(props,context){
     const inputValue_userid = ref("请输入账号");
     const inputValue_password = ref("请输入密码");
+    const inputValue_password_again = ref("请复输密码")
 
+    const changePanel_to_login =() =>{
+      console.log("changePanel_to_login 函数被触发")
+      context.emit('loginPanel_show',true)
+    }
 
     return{
       inputValue_userid,
       inputValue_password,
+      inputValue_password_again,
+      changePanel_to_login,
     }
   }
 }
@@ -42,12 +50,12 @@ export default {
 #div_login_panel {
   margin-top: 2.5%;
   float: right;
-  width: 30rem;
-  height: 30rem;
-  background: var(--div_white);
+  width: var(--area-Welcome-panel-width);
+  height: var(--area-Welcome-panel-height-register);
+  background: var(--color-div_white);
   text-align: center;
   border-radius: 10px;
-  box-shadow: var(--box-shadow-blue) 0 0 40px 30px;
+  box-shadow: var(--color-box-shadow-blue) 0 0 40px 30px;
 }
 .font_top {
   width: 50%;
@@ -56,7 +64,7 @@ export default {
   margin-top: 3vh;
   margin-bottom: 3vh;
   font-weight: bold;
-  font-size: 30px;
-  border-bottom: 2px var(--button_color_blue) solid;
+  font-size: var(--fontSize-Welcome-panel-top);
+  border-bottom: 2px var(--color-button_color_blue) solid;
 }
 </style>

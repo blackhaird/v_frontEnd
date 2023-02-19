@@ -3,6 +3,7 @@ a{
     font-weight: bold;
     text-decoration:none;
     transition: 0.1s;
+    cursor: pointer;
 }
 a:hover{
     color: var(--font_black);

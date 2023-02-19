@@ -1,3 +1,16 @@
+/*
+Global style
+全局样式设定
+    包括：字体,面板大小，字体大小
+*/
+:root{
+    --fontSize-Welcome-panel-top:1.6rem;
+    
+    --area-Welcome-panel-width:30rem;
+    --area-Welcome-panel-height-login:30rem;
+    --area-Welcome-panel-height-register: 34rem;
+}
+
 .display_center{
     display: flex;
     justify-content: center;
