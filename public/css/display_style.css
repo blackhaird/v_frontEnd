@@ -5,12 +5,16 @@ Global style
 */
 :root{
     --fontSize-Welcome-panel-top:1.6rem;
-    
+
     --area-Welcome-panel-width:30rem;
     --area-Welcome-panel-height-login:30rem;
     --area-Welcome-panel-height-register: 34rem;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .display_center{
     display: flex;
     justify-content: center;

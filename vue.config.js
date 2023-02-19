@@ -9,7 +9,7 @@ module.exports = defineConfig({
           filename: 'welcome.html',
         },
 
-        mian_page:{
+        main_page:{
           entry:'src/main_page/src/main.js',
           template:'public/main.html',
           filename:'main.html',

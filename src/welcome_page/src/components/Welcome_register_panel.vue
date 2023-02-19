@@ -1,4 +1,5 @@
 <template>
+  <transition name="panel_animation">
   <div id="div_login_panel">
     <div class="font_top">注册账号</div>
     <X_input :input-value="inputValue_userid"></X_input>
@@ -14,6 +15,7 @@
     <!--            <span class="col double_ended_line ">点击</span><br><br>-->
     <X_button class="col"></X_button>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -48,7 +50,6 @@ export default {
 
 <style scoped>
 #div_login_panel {
-  margin-top: 2.5%;
   float: right;
   width: var(--area-Welcome-panel-width);
   height: var(--area-Welcome-panel-height-register);
@@ -66,5 +67,11 @@ export default {
   font-weight: bold;
   font-size: var(--fontSize-Welcome-panel-top);
   border-bottom: 2px var(--color-button_color_blue) solid;
+}
+.panel_animation-enter-active{
+  animation: panel_change_enter 1s ;
+}
+.panel_animation-leave-active{
+  animation: panel_change_leave 0.5s ;
 }
 </style>

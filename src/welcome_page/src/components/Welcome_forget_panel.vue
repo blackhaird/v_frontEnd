@@ -1,20 +1,17 @@
-<template>
-  <transition name="panel_animation">
-  <div id="div_login_panel">
-    <div class="font_top">用户登录</div>
-    <X_input :input-value="inputValue_userid"></X_input>
-    <br><br>
-    <X_input :input-value="inputValue_password"></X_input>
-    <br><br>
+<!--待修改-->
 
-    <span class="row">
-              <a class="col">忘记密码</a>
+<template>
+    <div id="div_login_panel">
+      <div class="font_top">用户登录</div>
+      <X_input :input-value="inputValue_userid"></X_input>
+
+      <span class="row">
+              <a class="col" @click="">忘记密码</a>
               <a class="col" @click="changePanel_to_register">注册账号</a>
             </span><br><br>
-    <!--            <span class="col double_ended_line ">点击</span><br><br>-->
-    <X_button class="col"></X_button>
-  </div>
-  </transition>
+
+      <X_button class="col"></X_button>
+    </div>
 </template>
 
 <script>
@@ -66,11 +63,6 @@ export default {
   font-size: var(--fontSize-Welcome-panel-top);
   border-bottom: 2px var(--color-button_color_blue) solid;
 }
-.panel_animation-enter-active{
-  animation: panel_change_enter 1s ;
-}
-.panel_animation-leave-active{
-  animation: panel_change_leave 1s ;
-}
+
 
 </style>
