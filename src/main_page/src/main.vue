@@ -1,24 +1,114 @@
 <template>
 
   <header>
-    <Main_topSidebar></Main_topSidebar>
   </header>
 
-  <div class="display_center">
+  <div>
+    <div id="main_homepage">
+
+      <div class="row">
+        <Main_topSidebar></Main_topSidebar>
+      </div>
+
+      <div style="color: white">
+        <div class="row div_main_top"></div>
+        <div class="row">
+
+          <!--网站主页面封面-->
+          <div class="col display_center" id="div_main_message">
+            <div id="div_main_message_value">
+              <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
+              <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
+              <span class="span_main_message_title_explain">
+                刚健笃实，辉光日新<br>
+                阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校<br>
+                学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
+              </span>
+            </div>
+          </div>
+
+          <transition name="div_animation">
+          <div class="col-3 div_animation" id="div_main_icon" ></div>
+          </transition>
+
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
   </div>
 
+  <div>
+    <div id="main_div">
+    </div>
+  </div>
 </template>
 
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
+
 export default {
   name: "mainApp",
-  components:{
+  components: {
     Main_topSidebar
   }
 }
 </script>
 
 <style scoped>
+/*
+main_homepage的css样式设定
+*/
+#main_homepage {
+  background: url("~@/../public/img/wave-haikei.svg") no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+#main_div {
+  width: 100%;
+  height: 100vh;
+}
+
+.div_main_top {
+  width: 100%;
+  height: 1rem;
+}
+
+#div_main_message {
+  position: relative;
+  width: 50rem;
+  height: 40rem;
+}
+#div_main_message_value{
+  width:52rem;
+  height: 20rem;
+  text-align: left;
+  padding-left: 3rem;
+}
+#div_main_icon {
+  width: 50rem;
+  height: 40rem;
+  background: url("~@/main_page/src/assets/img/main_mainPanel_icon.svg") no-repeat ;
+  background-size:40rem;
+}
+
+.h1_main_message_title_Chinese{
+  font-size: var(--fontSize-Main-panel-mainMessageTitle-Chinese);
+  font-weight: bold;
+}
+.h3_main_message_title_English{
+  font-size: var(--fontSize-Main-panel-mainMessageTitle-English);
+}
+
+.span_main_message_title_explain{
+
+}
+
+.div_animation{
+  animation: main_float 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 </style>

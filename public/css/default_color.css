@@ -14,3 +14,7 @@ Global color
 
     --color-input-bgnormal-gray:#f7f7f9;
 }
+
+body{
+    background: var(--color-bg_white);
+}

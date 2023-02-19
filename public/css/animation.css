@@ -27,3 +27,20 @@
         opacity: 1; transform: scale(1);
     }
 }
+
+
+@keyframes main_float {
+    0%{
+        position: relative;
+        margin-top: 1rem;
+    }
+    50%{
+        margin-top: 0;
+        position: relative;
+    }
+    100%{
+        margin-top: 1rem;
+        position: relative;
+    }
+    
+}
