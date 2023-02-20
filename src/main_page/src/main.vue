@@ -15,25 +15,31 @@
         <div class="row">
 
           <!--网站主页面封面-->
-          <div class="col display_center" id="div_main_message">
+          <div class="col display_center" id="div_main_message_display">
             <div id="div_main_message_value">
               <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
               <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
               <span class="span_main_message_title_explain">
                 刚健笃实，辉光日新<br>
-                阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校<br>
-                学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
+                阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
+                学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
+                并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
               </span>
             </div>
           </div>
 
           <transition name="div_animation">
-          <div class="col-3 div_animation" id="div_main_icon" ></div>
+            <div class="col display_center" id="div_main_icon_display">
+              <div class="div_animation" id="div_main_icon"></div>
+            </div>
           </transition>
 
         </div>
-        <div class="row"></div>
+        <div class="row">
+          <div class="col test_box">123</div>
+        </div>
       </div>
+
     </div>
   </div>
 
@@ -75,37 +81,49 @@ main_homepage的css样式设定
   height: 1rem;
 }
 
-#div_main_message {
+#div_main_message_display {
   position: relative;
-  width: 50rem;
-  height: 40rem;
-}
-#div_main_message_value{
-  width:52rem;
-  height: 20rem;
-  text-align: left;
-  padding-left: 3rem;
-}
-#div_main_icon {
-  width: 50rem;
-  height: 40rem;
-  background: url("~@/main_page/src/assets/img/main_mainPanel_icon.svg") no-repeat ;
-  background-size:40rem;
+  width: 100%;
+  height: 50rem;
 }
 
-.h1_main_message_title_Chinese{
+#div_main_message_value {
+  width: 50rem;
+  height: 20rem;
+  text-align: right;
+  padding-right: 20px;
+      /* 不换行 */
+
+}
+#div_main_icon_display{
+  position: relative;
+  width: auto;
+  height: 50rem;
+  background: red;
+}
+
+#div_main_icon {
+  width: 38rem;
+  height: 40rem;
+  background: url("~@/main_page/src/assets/img/main_mainPanel_icon.svg") no-repeat;
+  background-size: 100%;
+}
+
+.h1_main_message_title_Chinese {
+  text-align: center;
   font-size: var(--fontSize-Main-panel-mainMessageTitle-Chinese);
   font-weight: bold;
 }
-.h3_main_message_title_English{
+
+.h3_main_message_title_English {
   font-size: var(--fontSize-Main-panel-mainMessageTitle-English);
 }
 
-.span_main_message_title_explain{
-
+.span_main_message_title_explain {
+  font-size: var(--fontSize-spanMain-panel-messageTitle_explain);
 }
 
-.div_animation{
+.div_animation {
   animation: main_float 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;

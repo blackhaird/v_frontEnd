@@ -2,7 +2,8 @@
     --fontSize-Welcome-panel-top:1.6rem;
 
     --fontSize-Main-panel-mainMessageTitle-Chinese:4.6rem;
-    --fontSize-Main-panel-mainMessageTitle-English:1.6rem
+    --fontSize-Main-panel-mainMessageTitle-English:1.6rem;
+    --fontSize-spanMain-panel-messageTitle_explain:1.1rem;
 }
 
 *{
