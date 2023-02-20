@@ -86,16 +86,14 @@ export default {
 <style scoped>
 #topSidebar_main{
   display: flex;
-
   /*box-shadow: var(--color-box-shadow-blue) 2px 5px 15px 5px;*/
-  border: var(--color-font_gray) 1px ;
-  border-radius: 5px;
+  /*border: var(--color-font_gray) 1px ;*/
   width: 100%;
   height: 4rem;
   color: var(--color-div_white);
 }
 .topSidebar_li_father{
-  width: 10rem;
+  width: 9rem;
   height: 4rem;
   line-height: 4rem;
   align-items: center;

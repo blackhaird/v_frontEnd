@@ -6,7 +6,7 @@
   <div>
     <div id="main_homepage">
 
-      <div class="row">
+      <div class="">
         <Main_topSidebar></Main_topSidebar>
       </div>
 
@@ -36,7 +36,9 @@
 
         </div>
         <div class="row">
-          <div class="col test_box">123</div>
+          <div class="col"></div>
+          <Main_IntroductionDirection class="col"></Main_IntroductionDirection>
+          <div class="col"></div>
         </div>
       </div>
 
@@ -44,18 +46,19 @@
   </div>
 
   <div>
-    <div id="main_div">
-    </div>
+    <div id="main_div"></div>
   </div>
 </template>
 
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
+import Main_IntroductionDirection from "@/main_page/src/components/Main_IntroductionDirection.vue";
 
 export default {
   name: "mainApp",
   components: {
-    Main_topSidebar
+    Main_topSidebar,
+    Main_IntroductionDirection,
   }
 }
 </script>
@@ -98,8 +101,7 @@ main_homepage的css样式设定
 #div_main_icon_display{
   position: relative;
   width: auto;
-  height: 50rem;
-  background: red;
+  height: 40rem;
 }
 
 #div_main_icon {
