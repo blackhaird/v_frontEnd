@@ -5,12 +5,11 @@
 
   <div>
     <div id="main_homepage">
-
       <div class="">
         <Main_topSidebar></Main_topSidebar>
       </div>
 
-      <div style="color: white">
+<!--      首页面板-->
         <div class="row div_main_top"></div>
         <div class="row">
 
@@ -34,13 +33,20 @@
                       </div>
                     </transition>
         </div>
+
+<!--      项目说明面板-->
         <div class="row">
-          <div class="col-1"></div>
+          <div class="div_main_title">
+            <h1>关于<span>项目</span></h1>
+            <h3>Item <span>Description </span></h3>
+          </div>
+            <br>
+          <div class="col-2"></div>
           <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message" :icon_locate="list.icon_locate" :key="list" class="col">{{ list }}
           </Main_IntroductionDirection>
-          <div class="col-1"></div>
+          <div class="col-2"></div>
         </div>
-      </div>
+
 
     </div>
   </div>
@@ -119,6 +125,7 @@ main_homepage的css样式设定
   height: 20rem;
   text-align: right;
   padding-right: 20px;
+  color: white;
 }
 
 #div_main_icon_display {
@@ -153,5 +160,20 @@ main_homepage的css样式设定
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+
+/*项目说明面板*/
+.div_main_title{
+
+  text-align: center;
+}
+.div_main_title h1{
+  font-weight: bold;
+  font-size: 4rem;
+}
+.div_main_title span{
+  color: var(--color-button_color_blue);
+}
+
 
 </style>
