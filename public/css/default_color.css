@@ -8,11 +8,11 @@ Global color
     --color-button_color_blue:#5359fd;
     --color-font_black:#19191a;
     --color-font_gray:#8b8c8f;
-    --color-box-shadow-blue:#edecfa;
+    --color-box-shadow_blue:#edecfa;
 
-    --color-a-normal-gray:#8b8c8f;
+    --color-a-normal_gray:#8b8c8f;
 
-    --color-input-bgnormal-gray:#f7f7f9;
+    --color-input-bgnormal_gray:#f7f7f9;
 }
 
 body{

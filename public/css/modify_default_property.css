@@ -1,5 +1,5 @@
 a{
-    color: var(--color-a-normal-gray);
+    color: var(--color-a-normal_gray);
     font-weight: bold;
     text-decoration:none;
     transition: 0.1s;

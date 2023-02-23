@@ -56,7 +56,7 @@ export default {
   background: var(--color-div_white);
   text-align: center;
   border-radius: 10px;
-  box-shadow: var(--color-box-shadow-blue) 0 0 40px 30px;
+  box-shadow: var(--color-box-shadow_blue) 0 0 40px 30px;
 }
 .font_top {
   width: 50%;

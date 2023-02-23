@@ -14,31 +14,31 @@
         <div class="row div_main_top"></div>
         <div class="row">
 
-          <!--网站主页面封面-->
-          <div class="col display_center" id="div_main_message_display">
-            <div id="div_main_message_value">
-              <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
-              <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
-              <span class="span_main_message_title_explain">
-                刚健笃实，辉光日新<br>
-                阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
-                学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
-                并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
-              </span>
-            </div>
-          </div>
+                    <!--网站主页面封面-->
+                    <div class="col display_center" id="div_main_message_display">
+                      <div id="div_main_message_value">
+                        <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
+                        <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
+                        <span class="span_main_message_title_explain">
+                          刚健笃实，辉光日新<br>
+                          阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
+                          学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
+                          并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
+                        </span>
+                      </div>
+                    </div>
 
-          <transition name="div_animation">
-            <div class="col display_center" id="div_main_icon_display">
-              <div class="div_animation" id="div_main_icon"></div>
-            </div>
-          </transition>
-
+                    <transition name="div_animation">
+                      <div class="col display_center" id="div_main_icon_display">
+                        <div class="div_animation" id="div_main_icon"></div>
+                      </div>
+                    </transition>
         </div>
         <div class="row">
-          <div class="col"></div>
-          <Main_IntroductionDirection class="col"></Main_IntroductionDirection>
-          <div class="col"></div>
+          <div class="col-1"></div>
+          <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message" :icon_locate="list.icon_locate" :key="list" class="col">{{ list }}
+          </Main_IntroductionDirection>
+          <div class="col-1"></div>
         </div>
       </div>
 
@@ -53,12 +53,36 @@
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
 import Main_IntroductionDirection from "@/main_page/src/components/Main_IntroductionDirection.vue";
+import {ref} from "vue";
 
 export default {
   name: "mainApp",
   components: {
     Main_topSidebar,
     Main_IntroductionDirection,
+  },
+  setup() {
+    const IntroductionDirection_lists = ref([
+      {
+        "icon_locate": "@/",
+        "message": "Gitee 是开源中国社区2013年推出的基于 Git 的代码托管服务，目前已经成为国内最大的代码托管平台，致力于为国内开发者提供优质稳定的托管服务。"
+      },
+      {
+        "icon_locate": "@/",
+        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+      },
+      {
+        "icon_locate": "@/",
+        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+      },
+      {
+        "icon_locate": "@/",
+        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+      }
+    ])
+    return {
+      IntroductionDirection_lists
+    }
   }
 }
 </script>
@@ -87,7 +111,7 @@ main_homepage的css样式设定
 #div_main_message_display {
   position: relative;
   width: 100%;
-  height: 50rem;
+  height: 55rem;
 }
 
 #div_main_message_value {
@@ -95,10 +119,9 @@ main_homepage的css样式设定
   height: 20rem;
   text-align: right;
   padding-right: 20px;
-      /* 不换行 */
-
 }
-#div_main_icon_display{
+
+#div_main_icon_display {
   position: relative;
   width: auto;
   height: 40rem;

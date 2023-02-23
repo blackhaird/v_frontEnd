@@ -44,3 +44,13 @@
     }
     
 }
+
+@keyframes main_ID_float {
+    0%{
+        position: relative;
+    }
+    100%{
+        position: relative;
+        margin-top: 1rem;
+    }
+}
