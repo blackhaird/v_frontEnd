@@ -47,6 +47,8 @@
           <div class="col-2"></div>
         </div>
 
+<!--  图片说明    -->
+      <div class="row test_box" ref="test_box"></div>
 
     </div>
   </div>
@@ -59,7 +61,7 @@
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
 import Main_IntroductionDirection from "@/main_page/src/components/Main_IntroductionDirection.vue";
-import {ref} from "vue";
+import {ref,getCurrentInstance  } from "vue";
 
 export default {
   name: "mainApp",
@@ -67,7 +69,22 @@ export default {
     Main_topSidebar,
     Main_IntroductionDirection,
   },
+  mounted() {
+    window.addEventListener("scroll",this.handleScroll,true);
+  },
   setup() {
+    const currentScroll = ref(0);
+    const vm = getCurrentInstance();
+
+    const handleScroll =()=>{
+      currentScroll.value =window.pageYOffset;
+      console.log(currentScroll.value);
+      console.log(vm.ctx.$refs.test_box.offsetTop-500);
+      if (currentScroll.value >= vm.ctx.$refs.test_box.offsetTop-1000){
+        console.log("success")
+      }
+    }
+
     const IntroductionDirection_lists = ref([
       {
         "icon_locate": "@/",
@@ -87,7 +104,9 @@ export default {
       }
     ])
     return {
-      IntroductionDirection_lists
+      IntroductionDirection_lists,
+      currentScroll,
+      handleScroll,
     }
   }
 }
@@ -174,6 +193,8 @@ main_homepage的css样式设定
 .div_main_title span{
   color: var(--color-button_color_blue);
 }
+
+/*图片说明面板*/
 
 
 </style>

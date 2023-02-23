@@ -1,7 +1,7 @@
 <template>
   <div class="div_mainID_display display_center">
     <transition name="panel_animation">
-    <div class="div_mainID_panel row panel_animation">
+    <div class="div_mainID_panel row panel_animation ">
       <div class="div_mainID_panel_icon row"></div>
       <div class="dic_mainID_panel_message row-col">
         {{message_txt}}
