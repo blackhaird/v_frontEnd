@@ -9,45 +9,49 @@
         <Main_topSidebar></Main_topSidebar>
       </div>
 
-<!--      首页面板-->
-        <div class="row div_main_top"></div>
-        <div class="row">
+      <!--      首页面板-->
+      <div class="row div_main_top"></div>
+      <div class="row">
 
-                    <!--网站主页面封面-->
-                    <div class="col display_center" id="div_main_message_display">
-                      <div id="div_main_message_value">
-                        <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
-                        <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
-                        <span class="span_main_message_title_explain">
+        <!--网站主页面封面-->
+        <div class="col display_center" id="div_main_message_display">
+          <div id="div_main_message_value">
+            <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
+            <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
+            <span class="span_main_message_title_explain">
                           刚健笃实，辉光日新<br>
                           阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
                           学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
                           并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
                         </span>
-                      </div>
-                    </div>
-
-                    <transition name="div_animation">
-                      <div class="col display_center" id="div_main_icon_display">
-                        <div class="div_animation" id="div_main_icon"></div>
-                      </div>
-                    </transition>
-        </div>
-
-<!--      项目说明面板-->
-        <div class="row">
-          <div class="div_main_title">
-            <h1>关于<span>项目</span></h1>
-            <h3>Item <span>Description </span></h3>
           </div>
-            <br>
-          <div class="col-2"></div>
-          <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message" :icon_locate="list.icon_locate" :key="list" class="col">{{ list }}
-          </Main_IntroductionDirection>
-          <div class="col-2"></div>
         </div>
 
-<!--  图片说明    -->
+        <transition name="div_animation">
+          <div class="col display_center" id="div_main_icon_display">
+            <div class="div_animation" id="div_main_icon"></div>
+          </div>
+        </transition>
+      </div>
+
+      <!--      项目说明面板-->
+      <div class="row" ref="main_title">
+        <div class="div_main_item_title" ref="main_item">
+          <h1>关于<span>项目</span></h1>
+          <h3>Item <span>Description </span></h3>
+        </div>
+        <br>
+        <div class="div_main_ID_display display_center">
+        <div class="div_main_ID_involve_display row ">
+          <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message"
+                                      :icon_locate="list.icon_locate" :key="list" class="col"
+                                      :class="{bottomUp_Start:true,bottomUp_End:ID_show}">{{ list }}
+          </Main_IntroductionDirection>
+        </div>
+        </div>
+      </div>
+
+      <!--  图片说明    -->
       <div class="row test_box" ref="test_box"></div>
 
     </div>
@@ -61,7 +65,7 @@
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
 import Main_IntroductionDirection from "@/main_page/src/components/Main_IntroductionDirection.vue";
-import {ref,getCurrentInstance  } from "vue";
+import {ref, getCurrentInstance} from "vue";
 
 export default {
   name: "mainApp",
@@ -70,18 +74,19 @@ export default {
     Main_IntroductionDirection,
   },
   mounted() {
-    window.addEventListener("scroll",this.handleScroll,true);
+    window.addEventListener("scroll", this.handleScroll, true);
   },
   setup() {
     const currentScroll = ref(0);
     const vm = getCurrentInstance();
+    const ID_show = ref(false);
 
-    const handleScroll =()=>{
-      currentScroll.value =window.pageYOffset;
+    const handleScroll = () => {
+      currentScroll.value = window.pageYOffset;
       console.log(currentScroll.value);
-      console.log(vm.ctx.$refs.test_box.offsetTop-500);
-      if (currentScroll.value >= vm.ctx.$refs.test_box.offsetTop-1000){
-        console.log("success")
+      if (currentScroll.value >= vm.ctx.$refs.main_item.offsetTop - 800) {
+        console.log("success");
+        ID_show.value = true;
       }
     }
 
@@ -107,6 +112,7 @@ export default {
       IntroductionDirection_lists,
       currentScroll,
       handleScroll,
+      ID_show,
     }
   }
 }
@@ -182,19 +188,27 @@ main_homepage的css样式设定
 
 
 /*项目说明面板*/
-.div_main_title{
+.div_main_item_title {
 
   text-align: center;
 }
-.div_main_title h1{
+.div_main_ID_display{
+  width: 100%;
+  height: 40vh;
+  background: blue;
+}
+.div_main_ID_involve_display{
+  width: 80%;
+  background: red;
+}
+.div_main_item_title h1 {
   font-weight: bold;
   font-size: 4rem;
 }
-.div_main_title span{
+.div_main_item_title span {
   color: var(--color-button_color_blue);
 }
 
 /*图片说明面板*/
-
 
 </style>

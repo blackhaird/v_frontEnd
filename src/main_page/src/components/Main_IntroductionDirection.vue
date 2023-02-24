@@ -1,9 +1,9 @@
 <template>
-  <div class="div_mainID_display display_center">
+  <div class="div_mainID_display">
     <transition name="panel_animation">
     <div class="div_mainID_panel row panel_animation ">
       <div class="div_mainID_panel_icon row"></div>
-      <div class="dic_mainID_panel_message row-col">
+      <div class="dic_mainID_panel_message row">
         {{message_txt}}
       </div>
     </div>
@@ -34,13 +34,12 @@ export default {
 
 <style scoped>
 .div_mainID_display{
-  width: 300px;
-  height: 500px;
   color: var(--color-font_black);
 }
 .div_mainID_panel{
+  position: relative;
   width: 18rem;
-  height: 23rem;
+  height: 20rem;
   background: var(--color-div_white);
   display: flex;
   justify-content: center;
@@ -57,7 +56,7 @@ export default {
 }
 .dic_mainID_panel_message{
   width: 15rem;
-  height: 10rem;
+  height: 15rem;
   font-size: 0.9rem;
 }
 .div_mainID_panel:hover{
