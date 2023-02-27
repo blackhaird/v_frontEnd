@@ -36,18 +36,18 @@
 
       <!--      项目说明面板-->
       <div class="row" ref="main_title">
-        <div class="div_main_item_title" ref="main_item">
+        <div class="div_main_item_title row" ref="main_item">
           <h1>关于<span>项目</span></h1>
           <h3>Item <span>Description </span></h3>
         </div>
         <br>
-        <div class="div_main_ID_display display_center">
-        <div class="div_main_ID_involve_display row ">
-          <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message"
-                                      :icon_locate="list.icon_locate" :key="list" class="col"
-                                      :class="{bottomUp_Start:true,bottomUp_End:ID_show}">{{ list }}
-          </Main_IntroductionDirection>
-        </div>
+        <div class="div_main_ID_display  row ">
+          <div class="div_main_ID_involve_display row ">
+            <Main_IntroductionDirection v-for="list in IntroductionDirection_lists" :message_txt="list.message"
+                                        :icon_locate="list.icon_locate" :key="list" class="col"
+                                        :class="{bottomUp_Start:true,bottomUp_End:ID_show}" />
+
+          </div>
         </div>
       </div>
 
@@ -192,19 +192,27 @@ main_homepage的css样式设定
 
   text-align: center;
 }
-.div_main_ID_display{
-  width: 100%;
-  height: 40vh;
+
+.div_main_ID_display {
+  position: relative;
+
+  height: 50vh;
   background: blue;
 }
-.div_main_ID_involve_display{
-  width: 80%;
+
+.div_main_ID_involve_display {
+  position: relative;
+  margin: 0 auto;
+  width: 170vh;
+  height: 50vh;
   background: red;
 }
+
 .div_main_item_title h1 {
   font-weight: bold;
   font-size: 4rem;
 }
+
 .div_main_item_title span {
   color: var(--color-button_color_blue);
 }
