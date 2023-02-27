@@ -44,6 +44,14 @@
     }
     
 }
+@keyframes second_panel_show {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
 
 .bottomUp_End {
     transform: translateY(0%) !important;
