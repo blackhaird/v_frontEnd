@@ -46,10 +46,32 @@
 }
 @keyframes second_panel_show {
     0%{
+
+        margin-left: -40%;
+    }
+    100%{
+        opacity: 1 !important;
+    }
+}
+@keyframes second_panel_message_p_show {
+    0%{
+        white-space:nowrap;
+        overflow: hidden;
         width: 0;
     }
     100%{
+        white-space:nowrap;
+        overflow: hidden;
         width: 100%;
+    }
+}
+@keyframes second_panel_message_show {
+    0%{
+        position: relative;
+        margin-right: -40%;
+    }
+    100%{
+        margin: 0;
     }
 }
 

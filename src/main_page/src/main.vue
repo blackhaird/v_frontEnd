@@ -51,6 +51,8 @@
         </div>
       </div>
 
+
+
       <!--  图片说明    -->
       <div class="row div_main_second_panel_display" ref="second_panel">
         <div class="row"></div>
@@ -61,37 +63,36 @@
         </div>
 
         <div class="row">
+          <div class="col-lg-2"></div>
           <div class="col-lg-4 div_main_second_panel_img_display ">
-            <div class="div_main_second_panel_img_first"
+            <div class="div_main_second_panel_img_first row"
                  :class="{div_main_second_panel_img_div_first:second_panel_img_div_show}">
-              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start"
+              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start row"
                    :class="{img_main_second_panel_img_first:second_panel_img_show}">
             </div>
           </div>
 
-          <div class="col-lg-4 div_main_second_panel_message_display">
-            <div style="text-align: center">
-              <h1 class="row">阳光学院简章</h1>
-              <p class="row">
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-                Irregular whitespace not allowed no-irregular-whitespace<br>
-
-              </p>
+          <div class="col-lg-4 div_main_second_panel_message_display display_center">
+            <div class="div_main_second_panel_message_bg" :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
+              <div class="div_main_second_panel_message_p" :class="{animation_main_second_panel_message_p:second_panel_message_p_show}">                <h1 class="row">阳光学院简章</h1>
+                <p class="row">
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
+      <div class="row div_main_three_panel_display"></div>
+      </div>
     </div>
-  </div>
-
   <div>
-    <div id="main_div"></div>
   </div>
 </template>
 
@@ -113,18 +114,25 @@ export default {
     const currentScroll = ref(0);
     const vm = getCurrentInstance();
     const ID_show = ref(false);
+
     const second_panel_img_show = ref(false)
     const second_panel_img_div_show = ref(false)
+    const second_panel_message_bg_show = ref(false)
+    const second_panel_message_p_show = ref(false)
     const handleScroll = () => {
       currentScroll.value = window.pageYOffset;
       if (currentScroll.value >= vm.ctx.$refs.main_item.offsetTop - 800) {
         ID_show.value = true;
       }
+
+
       if (currentScroll.value >= vm.ctx.$refs.second_panel.offsetTop - 500) {
         second_panel_img_div_show.value = true
+        second_panel_message_bg_show.value=true
         setTimeout(() => {
           second_panel_img_show.value = true;
-        }, 400)
+          second_panel_message_p_show.value =true;
+        }, 450)
       }
     }
 
@@ -151,6 +159,9 @@ export default {
       currentScroll,
       handleScroll,
       ID_show,
+
+      second_panel_message_p_show,
+      second_panel_message_bg_show,
       second_panel_img_div_show,
       second_panel_img_show,
     }
@@ -259,7 +270,8 @@ main_homepage的css样式设定
 .div_main_second_panel_display {
   width: 100%;
   height: 100vh;
-  background: rebeccapurple;
+  background-image: url("~@/../src/main_page/src/assets/wave-haikei_second_panel.svg");
+
 }
 
 .div_main_second_panel_img_display {
@@ -270,17 +282,42 @@ main_homepage的css样式设定
 }
 
 .div_main_second_panel_message_display {
-  width: 75%;
+  width: 55%;
   height: 80vh;
-  background: rosybrown;
 }
+.div_main_second_panel_message_bg{
+  width: 80%;
+  height: 50vh;
+  background: var(--color-button_color_blue);
+  color: var(--color-bg_white);
+  text-align: center;
+  opacity: 0;
+}
+.div_main_second_panel_message_p{
+  opacity: 0;
+}
+.div_main_second_panel_message_p h1{
+  font-weight: bold;
+  font-size: 50px;
+}
+.div_main_second_panel_message_p p{
+  font-size: 20px;
 
+}
 .div_main_second_panel_img_first {
   opacity: 0;
   width: 100%;
   height: 80vh;
-  background: var(--color-button_color_blue);
+  background: var(--color-secondPanel-bg_blue);
   overflow: hidden;
+}
+.animation_main_second_panel_message_bg{
+  animation: second_panel_message_show 1s;
+  opacity: 1 !important;
+}
+.animation_main_second_panel_message_p{
+  animation: second_panel_message_p_show 2s;
+  opacity: 1 !important;
 }
 
 .img_main_second_panel_img_first {
@@ -289,18 +326,26 @@ main_homepage的css样式设定
 }
 
 .div_main_second_panel_img_div_first {
-  animation: second_panel_show 0.5s;
+  animation: second_panel_show 1s;
   opacity: 1 !important;
 }
 
 .img_main_second_panel_img_first_start {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-left: 10px;
   position: relative;
   max-width: 100%;
-  width: 100%;
+  width: auto;
   opacity: 0;
   display: block;
-  box-shadow: var(--color-font_gray) -5px 10px 10px 1px;
 }
+
+
+/*第三页面*/
+.div_main_three_panel_display{
+  width: 100%;
+  height: 100vh;
+  background: rebeccapurple;
+}
+
 </style>
