@@ -89,7 +89,9 @@
         </div>
       </div>
 
-      <div class="row div_main_three_panel_display"></div>
+      <div class="row div_main_three_panel_display">
+
+      </div>
       </div>
     </div>
   <div>
@@ -239,6 +241,7 @@ main_homepage的css样式设定
 
 
 /*项目说明面板*/
+
 .div_main_item_title {
 
   text-align: center;
@@ -246,9 +249,9 @@ main_homepage的css样式设定
 
 .div_main_ID_display {
   position: relative;
-
   height: 50vh;
 }
+
 
 .div_main_ID_involve_display {
   position: relative;
@@ -264,6 +267,28 @@ main_homepage的css样式设定
 
 .div_main_item_title span {
   color: var(--color-button_color_blue);
+}
+
+
+@media screen and (max-width: 1335px){
+  .div_main_ID_display{
+    height: 100vh;
+  }
+  .div_main_ID_involve_display{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px){
+}
+
+@media screen and (max-width: 695px){
+  .div_main_ID_display{
+    height: 110vh;
+  }
+  .div_main_ID_involve_display{
+    height: 110vh;
+  }
 }
 
 /*图片说明面板*/

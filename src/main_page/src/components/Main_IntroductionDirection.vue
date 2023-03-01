@@ -76,4 +76,25 @@ export default {
   animation: panel_change_leave 1s ;
 }
 
+@media screen and (max-width: 1335px){
+  .div_mainID_panel{
+    max-width: 30vh;
+  }
+}
+
+@media screen and (max-width: 695px){
+  .div_mainID_panel{
+    max-width: 50vh;
+    height:18vh;
+    padding-left:  10px;
+  }
+  .div_mainID_display{
+    height: 25vh;
+  }
+  .dic_mainID_panel_message{
+    display: flex;
+    align-items: center;
+  }
+}
+
 </style>
