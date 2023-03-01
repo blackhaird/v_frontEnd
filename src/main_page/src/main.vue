@@ -64,15 +64,15 @@
 
         <div class="row">
           <div class="col-lg-2"></div>
-          <div class="col-lg-4 div_main_second_panel_img_display ">
-            <div class="div_main_second_panel_img_first row"
+          <div class="col-lg-4 div_main_second_panel_img_display  row">
+            <div class="div_main_second_panel_img_first col"
                  :class="{div_main_second_panel_img_div_first:second_panel_img_div_show}">
-              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start row"
+              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start col"
                    :class="{img_main_second_panel_img_first:second_panel_img_show}">
             </div>
           </div>
 
-          <div class="col-lg-4 div_main_second_panel_message_display display_center">
+          <div class="col-lg-4 div_main_second_panel_message_display display_center row">
             <div class="div_main_second_panel_message_bg" :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
               <div class="div_main_second_panel_message_p" :class="{animation_main_second_panel_message_p:second_panel_message_p_show}">                <h1 class="row">阳光学院简章</h1>
                 <p class="row">
@@ -290,7 +290,23 @@ main_homepage的css样式设定
     height: 110vh;
   }
 }
+@media screen and (max-width: 573px){
+  .div_main_ID_display{
+    height: 180vh;
+  }
+  .div_main_ID_involve_display{
+    height: 180vh;
+  }
+}
+@media screen and (max-width: 375px){
+  .div_main_ID_involve_display{
+    height: 190vh;
+  }
+  .div_main_ID_display{
+    height: 210vh;
+  }
 
+}
 /*图片说明面板*/
 .div_main_second_panel_display {
   width: 100%;
@@ -337,7 +353,7 @@ main_homepage的css样式设定
   overflow: hidden;
 }
 .animation_main_second_panel_message_bg{
-  animation: second_panel_message_show 1s;
+  animation: second_panel_message_show 2s;
   opacity: 1 !important;
 }
 .animation_main_second_panel_message_p{
@@ -346,12 +362,12 @@ main_homepage的css样式设定
 }
 
 .img_main_second_panel_img_first {
-  animation: second_panel_show 1s;
+  animation: second_panel_show 3s;
   opacity: 1 !important;
 }
 
 .div_main_second_panel_img_div_first {
-  animation: second_panel_show 1s;
+  animation: second_panel_show 2s;
   opacity: 1 !important;
 }
 
@@ -364,7 +380,25 @@ main_homepage的css样式设定
   opacity: 0;
   display: block;
 }
+@media screen and (max-width: 1335px){
+  .div_main_second_panel_img_display{
+    width: 70vh;
+  }
+  .div_main_second_panel_img_first{
+    width: 50%;
+    height: 60vh;
+  }
+  .img_main_second_panel_img_first_start{
+    max-width: 50%;
+  }
+}
 
+@media screen and (max-width: 768px){
+}
+
+@media screen and (max-width: 695px){
+
+}
 
 /*第三页面*/
 .div_main_three_panel_display{

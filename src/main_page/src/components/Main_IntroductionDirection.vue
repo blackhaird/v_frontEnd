@@ -96,5 +96,32 @@ export default {
     align-items: center;
   }
 }
+@media screen and (max-width: 573px){
+  .div_mainID_panel{
+    max-width: 40vh;
+    height:35vh;
+    padding-left:  10px;
+  }
+  .dic_mainID_panel_message{
+    font-size: 14px;
+  }
+  .div_mainID_display{
+    height: 40vh;
+  }
 
+}
+@media screen and (max-width: 375px){
+  .div_mainID_panel{
+    max-width: 40vh;
+    height:43vh;
+    padding-left:  10px;
+  }
+  .dic_mainID_panel_message{
+    font-size: 14px;
+  }
+  .div_mainID_display{
+    height: 50vh;
+  }
+
+}
 </style>
