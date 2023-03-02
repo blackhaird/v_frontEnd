@@ -13,6 +13,11 @@ module.exports = defineConfig({
           entry:'src/main_page/src/main.js',
           template:'public/main.html',
           filename:'main.html',
+        },
+        function_page:{
+            entry:'src/function_page/src/function.js',
+            template:'public/function.html',
+            filename:'function.html'
         }
 
     },
