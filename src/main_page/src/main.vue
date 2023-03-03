@@ -52,7 +52,6 @@
       </div>
 
 
-
       <!--  图片说明    -->
       <div class="row div_main_second_panel_display" ref="second_panel">
         <div class="row"></div>
@@ -73,8 +72,11 @@
           </div>
 
           <div class="col-lg-4 div_main_second_panel_message_display display_center row">
-            <div class="div_main_second_panel_message_bg" :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
-              <div class="div_main_second_panel_message_p" :class="{animation_main_second_panel_message_p:second_panel_message_p_show}">                <h1 class="row">阳光学院简章</h1>
+            <div class="div_main_second_panel_message_bg"
+                 :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
+              <div class="div_main_second_panel_message_p"
+                   :class="{animation_main_second_panel_message_p:second_panel_message_p_show}"><h1 class="row">
+                阳光学院简章</h1>
                 <p class="row">
                   Irregular whitespace not allowed no-irregular-whitespace<br>
                   Irregular whitespace not allowed no-irregular-whitespace<br>
@@ -92,8 +94,31 @@
       <div class="row div_main_three_panel_display">
 
       </div>
+      <!--      <div class="div_main_item_title row" ref="main_item">-->
+      <!--        <h1>关于<span>项目</span></h1>-->
+      <!--        <h3>Item <span>Description </span></h3>-->
+      <!--      </div>-->
+
+      <div class=" div_main_last_panel_display row">
+        <div class="div_last_panel_title_display display_center">
+          <div class="div_last_panel_title">
+            <h1 class="row">搜索</h1><br>
+            <h3 class="row">Search</h3>
+          </div>
+        </div>
+
+        <div class="div_main_last_panel_search_display row ">
+          <div class="div_main_last_panel_search row display_center">
+            <x_input class="input_last_panel_search" :input-value="last_panel_search_input_placeholder"></x_input>
+          </div>
+        </div>
+
+        <div class="div_mian_last_panel_footerList_display row">
+          <main_LastPanelFooter></main_LastPanelFooter>
+        </div>
       </div>
     </div>
+  </div>
   <div>
   </div>
 </template>
@@ -101,6 +126,8 @@
 <script>
 import Main_topSidebar from "@/main_page/src/components/Main_topSidebar.vue";
 import Main_IntroductionDirection from "@/main_page/src/components/Main_IntroductionDirection.vue";
+import x_input from "@/components/X_input.vue";
+import main_LastPanelFooter from "@/main_page/src/components/Main_LastPanelFooter.vue";
 import {ref, getCurrentInstance} from "vue";
 
 export default {
@@ -108,6 +135,8 @@ export default {
   components: {
     Main_topSidebar,
     Main_IntroductionDirection,
+    main_LastPanelFooter,
+    x_input
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll, true);
@@ -121,6 +150,9 @@ export default {
     const second_panel_img_div_show = ref(false)
     const second_panel_message_bg_show = ref(false)
     const second_panel_message_p_show = ref(false)
+
+    const last_panel_search_input_placeholder = ref("搜索 Search");
+
     const handleScroll = () => {
       currentScroll.value = window.pageYOffset;
       if (currentScroll.value >= vm.ctx.$refs.main_item.offsetTop - 800) {
@@ -130,10 +162,10 @@ export default {
 
       if (currentScroll.value >= vm.ctx.$refs.second_panel.offsetTop - 500) {
         second_panel_img_div_show.value = true
-        second_panel_message_bg_show.value=true
+        second_panel_message_bg_show.value = true
         setTimeout(() => {
           second_panel_img_show.value = true;
-          second_panel_message_p_show.value =true;
+          second_panel_message_p_show.value = true;
         }, 450)
       }
     }
@@ -166,6 +198,8 @@ export default {
       second_panel_message_bg_show,
       second_panel_img_div_show,
       second_panel_img_show,
+
+      last_panel_search_input_placeholder,
     }
   }
 }
@@ -270,43 +304,50 @@ main_homepage的css样式设定
 }
 
 
-@media screen and (max-width: 1335px){
-  .div_main_ID_display{
+@media screen and (max-width: 1335px) {
+  .div_main_ID_display {
     height: 100vh;
   }
-  .div_main_ID_involve_display{
+
+  .div_main_ID_involve_display {
     height: 100vh;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 }
 
-@media screen and (max-width: 695px){
-  .div_main_ID_display{
+@media screen and (max-width: 695px) {
+  .div_main_ID_display {
     height: 110vh;
   }
-  .div_main_ID_involve_display{
+
+  .div_main_ID_involve_display {
     height: 110vh;
   }
 }
-@media screen and (max-width: 573px){
-  .div_main_ID_display{
+
+@media screen and (max-width: 573px) {
+  .div_main_ID_display {
     height: 180vh;
   }
-  .div_main_ID_involve_display{
+
+  .div_main_ID_involve_display {
     height: 180vh;
   }
 }
-@media screen and (max-width: 375px){
-  .div_main_ID_involve_display{
+
+@media screen and (max-width: 375px) {
+  .div_main_ID_involve_display {
     height: 190vh;
   }
-  .div_main_ID_display{
+
+  .div_main_ID_display {
     height: 210vh;
   }
 
 }
+
 /*图片说明面板*/
 .div_main_second_panel_display {
   width: 100%;
@@ -326,7 +367,8 @@ main_homepage的css样式设定
   width: 55%;
   height: 80vh;
 }
-.div_main_second_panel_message_bg{
+
+.div_main_second_panel_message_bg {
   width: 80%;
   height: 50vh;
   background: var(--color-button_color_blue);
@@ -334,17 +376,21 @@ main_homepage的css样式设定
   text-align: center;
   opacity: 0;
 }
-.div_main_second_panel_message_p{
+
+.div_main_second_panel_message_p {
   opacity: 0;
 }
-.div_main_second_panel_message_p h1{
+
+.div_main_second_panel_message_p h1 {
   font-weight: bold;
   font-size: 50px;
 }
-.div_main_second_panel_message_p p{
+
+.div_main_second_panel_message_p p {
   font-size: 20px;
 
 }
+
 .div_main_second_panel_img_first {
   opacity: 0;
   width: 100%;
@@ -352,11 +398,13 @@ main_homepage的css样式设定
   background: var(--color-secondPanel-bg_blue);
   overflow: hidden;
 }
-.animation_main_second_panel_message_bg{
+
+.animation_main_second_panel_message_bg {
   animation: second_panel_message_show 2s;
   opacity: 1 !important;
 }
-.animation_main_second_panel_message_p{
+
+.animation_main_second_panel_message_p {
   animation: second_panel_message_p_show 2s;
   opacity: 1 !important;
 }
@@ -380,31 +428,82 @@ main_homepage的css样式设定
   opacity: 0;
   display: block;
 }
-@media screen and (max-width: 1335px){
-  .div_main_second_panel_img_display{
+
+@media screen and (max-width: 1335px) {
+  .div_main_second_panel_img_display {
     width: 70vh;
   }
-  .div_main_second_panel_img_first{
+
+  .div_main_second_panel_img_first {
     width: 50%;
     height: 60vh;
   }
-  .img_main_second_panel_img_first_start{
+
+  .img_main_second_panel_img_first_start {
     max-width: 50%;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 }
 
-@media screen and (max-width: 695px){
+@media screen and (max-width: 695px) {
 
 }
 
 /*第三页面*/
-.div_main_three_panel_display{
+.div_main_three_panel_display {
   width: 100%;
   height: 100vh;
   background: rebeccapurple;
+}
+
+
+/*最后页面*/
+.div_main_last_panel_display {
+  width: 100%;
+  height: 100vh;
+  background: #2c3e50;
+}
+
+.input_last_panel_search {
+  width: 50vh;
+  height: 10vh;
+
+}
+
+.input_last_panel_search {
+  width: 50vh;
+  height: 8vh;
+}
+
+.input_last_panel_search:hover {
+  transform: scale(1.1);
+}
+
+.div_last_panel_title_display {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+
+.div_last_panel_title {
+  height: 20vh;
+}
+
+.div_last_panel_title h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--color-bg_white);
+}
+
+.div_mian_last_panel_footerList_display{
+  width: 100%;
+  height: 40vh;
+
+  position: relative;
 }
 
 </style>

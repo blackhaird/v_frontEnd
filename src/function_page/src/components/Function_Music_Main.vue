@@ -1,6 +1,6 @@
 <template>
   <div class="div_FM_display">
-    <Function_Music_Main_Meun :data="test_list"></Function_Music_Main_Meun>
+    <Function_Music_Main_Meun :data="NeteaseCloudMusicApi_list"></Function_Music_Main_Meun>
   {{test_list["data"]}}
   </div>
 </template>
@@ -23,15 +23,18 @@ export default {
     const NeteaseCloudMusicApi_list = reactive([]);
     axios.get("http://localhost:3000/playlist/track/all?id=5403278437&limit=10&offset=1").then(Response=>{
       console.log("请求成功");
+      // for (let i = 0; i < Response.data["songs"].length; i++) {
+      //   console.log(Response.data["songs"][i])
+      // }
       NeteaseCloudMusicApi_list.value = Response.data["songs"]
       console.log(NeteaseCloudMusicApi_list.value)
+      // console.log(NeteaseCloudMusicApi_list.value["0"])
     }).catch(Error =>{
       console.log("请求失败");
       console.log(Error);
       console.log(Error.data);
     })
 
-    console.log(test_list)
 
     return{
       NeteaseCloudMusicApi_list,
