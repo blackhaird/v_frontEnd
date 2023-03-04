@@ -23,7 +23,7 @@
                           阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
                           学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
                           并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
-                        </span>
+            </span>
           </div>
         </div>
 
@@ -188,6 +188,8 @@ export default {
         "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
       }
     ])
+
+    console.log(IntroductionDirection_lists)
     return {
       IntroductionDirection_lists,
       currentScroll,
@@ -499,7 +501,7 @@ main_homepage的css样式设定
   color: var(--color-bg_white);
 }
 
-.div_mian_last_panel_footerList_display{
+.div_mian_last_panel_footerList_display {
   width: 100%;
   height: 40vh;
 
