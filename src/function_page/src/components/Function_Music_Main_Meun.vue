@@ -1,6 +1,6 @@
 <template>
   <div class="div_FM_Meun_display col-lg-3">
-    <div class="div_FM_Meun_bg ">
+    <div class="div_FM_Meun_bg" v-on:click="music_play">
 
 <!--      reactive 预留代码-->
 <!--      <div class="img_FM_Menu_icon row">-->
@@ -10,7 +10,6 @@
 <!--        <p>{{list.value[0].name}} —— {{ list.value[0].ar[0].name}}</p>-->
 <!--      </div>-->
 
-
       <div class="img_FM_Menu_icon ">
         <img :src="img_src">
       </div>
@@ -18,12 +17,14 @@
         <p>{{music_name}}<br>
           <span>{{ author_name}}</span></p>
       </div>
-
     </div>
   </div>
 </template>
 <script>
 // import {toRefs} from "vue";
+
+import axios from "axios";
+import {ref} from "vue";
 
 export default {
   name: "Function_Music_Main_Meun",
@@ -31,17 +32,35 @@ export default {
     music_name:String,
     author_name:String,
     img_src:String,
-
+    music_id:Number
     // data: Object
   },
-  setup() {
+  setup(props,context) {
+    console.log(props.music_id)
+    const musicURL = ref()
+
     // const p = toRefs(props)
     // const list = p.data;
     // if (list.value.length>0){
     //   console.log("收到了")
     // }
+
+    const music_play=()=>{
+      console.log("music_play被触发")
+      axios.get("http://localhost:3000/song/url/v1?id="+props.music_id+"&level=exhigh").then(Response=>{
+        musicURL.value = Response.data["data"][0].url;
+        context.emit("musicID",musicURL.value);
+        context.emit("music_list",[props.music_name,props.author_name,props.img_src]);
+      }).catch(Error => {
+        console.log("error")
+        console.log(Error)
+      })
+    }
+
     return {
       // list
+      music_play,
+      musicURL
     }
   }
 }
@@ -89,7 +108,13 @@ export default {
   font-size: 15px;
 
 }
+.div_FM_Meun_bg{
+  transition: 0.5s;
+  cursor:pointer;
+}
 .div_FM_Meun_bg:hover {
-
+  transform: scale(1.05);
+  padding-bottom: 5px;
+  box-shadow: var(--color-musicPanel-bg_blue) 0px 20px 30px 5px;
 }
 </style>

@@ -36,8 +36,7 @@ export default {
         "title_en": "NAVIGATION"
       },
     ])
-    console.log(sidebar_list.value)
-    console.log(typeof sidebar_list.value)
+
     return {
       sidebar_list
     }
@@ -55,6 +54,6 @@ export default {
 .div_function_function_panel_display {
   width: 40%;
   height: 100vh;
-  background: rebeccapurple;
+  background: var(--color-bg_white);
 }
 </style>
