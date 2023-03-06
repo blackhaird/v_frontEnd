@@ -14,7 +14,7 @@
           </div>
           <div class="row">
             <h1 class="col">
-              网页在线音乐平台
+              网页在线音乐平
             </h1>
             <span>网站式音乐平台,无需APP,点击即用。轻便,快捷,多平台适配</span>
           </div>
