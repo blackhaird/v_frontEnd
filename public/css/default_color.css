@@ -5,12 +5,16 @@ Global color
 :root {
     --color-div_white:#ffffff;
     --color-bg_white:#fcfcfc;
-    --color-button_color_blue:#5359fd;
+    --color-button_color_blue:#2b199e;
+    --color-button_color_hover_blue:#5359fd;
+
     --color-font_black:#19191a;
     --color-font_gray:#8b8c8f;
     --color-box-shadow_blue:#edecfa;
     --color-secondPanel-bg_white:#f0f4f8;
     --color-secondPanel-bg_blue:#2b199e ;
+    --color-thirdPanel-bg_blue:#2b199e ;
+
     --color-a-normal_gray:#8b8c8f;
     --color-musicPanel-bg_blue:#90a1d4 ;
 

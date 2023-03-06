@@ -10,20 +10,17 @@
       </div>
 
       <!--      首页面板-->
-      <div class="row div_main_top"></div>
-      <div class="row">
+      <div class="row div_main_panel">
 
         <!--网站主页面封面-->
         <div class="col display_center" id="div_main_message_display">
           <div id="div_main_message_value">
-            <h1 class="h1_main_message_title_Chinese">阳光学院教务系统</h1>
-            <h3 class="h3_main_message_title_English">Yango School Educational Administration System</h3><br>
+            <h1 class="h1_main_message_title_Chinese">网页在线音乐平台</h1>
+            <h3 class="h3_main_message_title_English">Web-based music platform</h3><br>
             <span class="span_main_message_title_explain">
-                          刚健笃实，辉光日新<br>
-                          阳光学院（Yango University）位于福建省福州市，是经中华人民共和国教育部批准成立的民办全日制普通高等学校
-                          学院创建于2001年，时名福州大学阳光学院，为独立学院；2015年经国家教育部批准，转设为独立设置的民办普通本科高校，
-                          并更名为阳光学院。2020年进入中国民办综合性大学排名前十强。2022年入选福建省一流应用型建设高校培育项目。
-            </span>
+                          在线音乐作为随身听产品的鼻祖，索尼在被苹果公司以iPod+iTunes软硬件相结合的模式打败后，在2004年也宣布开始Connect在线数字音乐商店，以付费下载数字音乐文件的模式，希望能令其Walkman产品从苹果手中夺回冠军宝座。在当年索尼效仿苹果开始这一服务时，由于其具有20多年音乐随身听的硬件技术基础，加上完整的家电数码产品线，更具备自己的唱片和电影公司，因其综合资源上的优势曾被业界寄予厚望，
+            </span><br>
+            <X_button class="div_main_button" style="display: none"></X_button>
           </div>
         </div>
 
@@ -53,8 +50,8 @@
 
 
       <!--  图片说明    -->
-      <div class="row div_main_second_panel_display" ref="second_panel">
-        <div class="row"></div>
+      <div class=" div_main_second_panel_display" ref="second_panel">
+        <div class="row" style="height: 3vh"></div>
         <!--        共用Title-->
         <div class="div_main_item_title ">
           <h1>关于<span>项目</span></h1>
@@ -62,37 +59,63 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-4 div_main_second_panel_img_display  row">
-            <div class="div_main_second_panel_img_first col"
+
+          <div class="div_main_second_panel_img_display display_center">
+            <div class="div_main_second_panel_img_first"
                  :class="{div_main_second_panel_img_div_first:second_panel_img_div_show}">
-              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start col"
+              <img src="./assets/main_second_panel_img.png" class="img_main_second_panel_img_first_start"
                    :class="{img_main_second_panel_img_first:second_panel_img_show}">
             </div>
           </div>
 
-          <div class="col-lg-4 div_main_second_panel_message_display display_center row">
+          <div class=" div_main_second_panel_message_display display_center row">
             <div class="div_main_second_panel_message_bg"
                  :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
               <div class="div_main_second_panel_message_p"
                    :class="{animation_main_second_panel_message_p:second_panel_message_p_show}"><h1 class="row">
-                阳光学院简章</h1>
+                音乐随时享受</h1>
                 <p class="row">
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
-                  Irregular whitespace not allowed no-irregular-whitespace<br>
+                  在线音乐是通过互联网传输和播放的音乐。它可以通过各种方式访问，例如流媒体服务、数字音乐下载、<br>
+                  在线广播和社交媒体平台等。<br>
+                  在线音乐具有便利性和多样性，用户可以随时随地访问和听取各种类型的音乐，<br>
+                  而且通常比传统的音乐购买方式更经济实惠。
+                  在线音乐平台通常提供个性化推荐功能，根据用户的喜好推荐音乐，<br>也可以让用户创建自己的播放列表或收藏歌曲。
+                  在线音乐也为艺术家和唱片公司提供了一种新的发行和宣传方式，<br>同时也为音乐产业带来了新的商业模式。
+                  许多在线音乐平台允许用户创建自己的音乐社交账号，<br>分享自己的音乐、收听别人的音乐，与其他音乐爱好者互动。
                 </p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
-      <div class="row div_main_three_panel_display">
+      <div class="row div_main_third_panel_display">
+        <div class="div_main_third_panel_firstP_display col">
 
+          <div class="div_main_third_panel row">
+            <div class="col div_main_third_panel_message ">
+              <h1 class="row">华语乐坛</h1>
+              <p class="row">随着中国经济的逐渐强大，富足而安定的生活为中国流行音乐提供了一个良好的温床，有利于我们对西方流行乐的更深层次的理解。使得来至于西方的流行音乐在中国不光是结合了很多的中国特色，中国元素，同时还会有其他国家与民族的音乐灵魂注入，使得中国的流行音乐更加多元化，创造出独具特色的中国流行音乐。</p>
+            </div>
+            <div class="col div_main_third_panel_firstP_img display_center">
+            <img src="./assets/img/main_thirdPanel_Author_first.png" class="img_main_third_panel_firstP col">
+            </div>
+          </div>
+
+        </div>
+        <div class="div_main_third_panel_secondP_display col">
+          <div class="div_main_third_panel row">
+            <div class="col div_main_third_panel_secondP_img display_center">
+              <img src="./assets/img/main_thirdPanel_Author_second.png" class="img_main_third_panel_secondP col">
+            </div>
+            <div class="div_main_third_panel_message col">
+              <h1 class="row">欧美乐坛</h1>
+              <p class="row">历史上著名的摇滚歌手和乐队有：甲壳虫乐队(披头士)，滚石乐队，皇后乐队，U2乐队，R.E.M，涅槃乐队，枪炮与玫瑰，Metallica乐队，邦乔维，Suede，老鹰乐队，黑色安息日，齐柏林飞船，平克·弗洛伊德，蝎子乐队，AC/DC，slipknot乐队等。此排名出自CCTV电视指南频道《数字飙榜之欧美十大摇滚乐队》。</p>
+            </div>
+          </div>
+
+        </div>
       </div>
       <!--      <div class="div_main_item_title row" ref="main_item">-->
       <!--        <h1>关于<span>项目</span></h1>-->
@@ -102,7 +125,7 @@
       <div class=" div_main_last_panel_display row">
         <div class="div_last_panel_title_display display_center">
           <div class="div_last_panel_title">
-            <h1 class="row">搜索</h1><br>
+            <h1 class="row">搜索</h1>
             <h3 class="row">Search</h3>
           </div>
         </div>
@@ -112,9 +135,21 @@
             <x_input class="input_last_panel_search" :input-value="last_panel_search_input_placeholder"></x_input>
           </div>
         </div>
-
-        <div class="div_mian_last_panel_footerList_display row">
-          <main_LastPanelFooter></main_LastPanelFooter>
+        <div class="col display_center">
+        <div class="col div_main_last_panel_img_display">
+          <img src="~@/../public/img/logo.png" class="div_main_last_panel_img col">
+        </div>
+        </div>
+        <div class="col display_center">
+          <div class="div_main_last_panel_message_display">
+            <p>在线音乐作为随身听产品的鼻祖，索尼在被苹果公司以iPod+iTunes软硬件相结合的模式打败后，在2004年也宣布开始Connect在线数字音乐商店，以付费下载数字音乐文件的模式，希望能令其Walkman产品从苹果手中夺回冠军宝座。在当年索尼效仿苹果开始这一服务时，由于其具有20多年音乐随身听的硬件技术基础，加上完整的家电数码产品线，更具备自己的唱片和电影公司，因其综合资源上的优势曾被业界寄予厚望，
+            <br>
+              XJW@2023.3.7
+            </p>
+          </div>
+        </div>
+        <div class="div_mian_last_panel_footerList_display col">
+          <main_LastPanelFooter :list_footer_message="list_footer_message"></main_LastPanelFooter>
         </div>
       </div>
     </div>
@@ -129,10 +164,12 @@ import Main_IntroductionDirection from "@/main_page/src/components/Main_Introduc
 import x_input from "@/components/X_input.vue";
 import main_LastPanelFooter from "@/main_page/src/components/Main_LastPanelFooter.vue";
 import {ref, getCurrentInstance} from "vue";
+import X_button from "@/components/X_button.vue";
 
 export default {
   name: "mainApp",
   components: {
+    X_button,
     Main_topSidebar,
     Main_IntroductionDirection,
     main_LastPanelFooter,
@@ -146,10 +183,10 @@ export default {
     const vm = getCurrentInstance();
     const ID_show = ref(false);
 
-    const second_panel_img_show = ref(false)
-    const second_panel_img_div_show = ref(false)
-    const second_panel_message_bg_show = ref(false)
-    const second_panel_message_p_show = ref(false)
+    const second_panel_img_show = ref(false);
+    const second_panel_img_div_show = ref(false);
+    const second_panel_message_bg_show = ref(false);
+    const second_panel_message_p_show = ref(false);
 
     const last_panel_search_input_placeholder = ref("搜索 Search");
 
@@ -189,7 +226,17 @@ export default {
       }
     ])
 
-    console.log(IntroductionDirection_lists)
+    const list_footer_message = ref([
+      {
+        "title":"音乐平台",
+        "message":["关于我们","联系我们","用户协议","加入我们"]
+      },
+      {
+        "title":"链接传送",
+        "message":["友情链接","协议汇总","广告合作","社区中心"]
+      }
+    ])
+
     return {
       IntroductionDirection_lists,
       currentScroll,
@@ -202,6 +249,8 @@ export default {
       second_panel_img_show,
 
       last_panel_search_input_placeholder,
+
+      list_footer_message,
     }
   }
 }
@@ -215,23 +264,15 @@ main_homepage的css样式设定
   background: url("~@/../public/img/wave-haikei.svg") no-repeat;
   width: 100%;
   height: 100vh;
-  z-index: -1;
 }
 
-#main_div {
-  width: 100%;
-  height: 100vh;
+.div_main_panel{
+  height: auto;
 }
-
-.div_main_top {
-  width: 100%;
-  height: 1rem;
-}
-
 #div_main_message_display {
   position: relative;
   width: 100%;
-  height: 55rem;
+  height: 45rem;
 }
 
 #div_main_message_value {
@@ -239,7 +280,7 @@ main_homepage的css样式设定
   height: 20rem;
   text-align: right;
   padding-right: 20px;
-  color: white;
+  color: var(--color-secondPanel-bg_white);
 }
 
 #div_main_icon_display {
@@ -254,7 +295,11 @@ main_homepage的css样式设定
   background: url("~@/main_page/src/assets/img/main_mainPanel_icon.svg") no-repeat;
   background-size: 100%;
 }
-
+.div_main_button{
+  margin-right: 200px;
+  margin-top: 50px;
+  background: var(--color-musicPanel-bgFont_black);
+}
 .h1_main_message_title_Chinese {
   text-align: center;
   font-size: var(--fontSize-Main-panel-mainMessageTitle-Chinese);
@@ -279,7 +324,7 @@ main_homepage的css样式设定
 /*项目说明面板*/
 
 .div_main_item_title {
-
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -320,6 +365,7 @@ main_homepage的css样式设定
 }
 
 @media screen and (max-width: 695px) {
+
   .div_main_ID_display {
     height: 110vh;
   }
@@ -353,22 +399,85 @@ main_homepage的css样式设定
 /*图片说明面板*/
 .div_main_second_panel_display {
   width: 100%;
-  height: 100vh;
-  background-image: url("~@/../src/main_page/src/assets/wave-haikei_second_panel.svg");
+  height: 110vh;
+  background: #f0f4f8;
 
+}
+
+.img_main_second_panel_img_first_start {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: block;
+}
+
+.div_main_second_panel_img_first {
+  opacity: 0;
+  width: 75%;
+  height: 100%;
+  background: var(--color-secondPanel-bg_blue);
+  overflow: hidden;
 }
 
 .div_main_second_panel_img_display {
   display: flex;
   align-items: center;
-  width: 25%;
+  width: 30%;
   height: 80vh;
+  /*background: red;*/
 }
 
 .div_main_second_panel_message_display {
-  width: 55%;
+  width: 70%;
   height: 80vh;
+  /*background: yellow;*/
 }
+
+@media screen and (max-width: 1500px) {
+  .div_main_second_panel_img_first {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .div_main_second_panel_img_display {
+    width: 40%;
+  }
+  .div_main_second_panel_message_display{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .div_main_second_panel_img_display {
+    width: 45%;
+  }
+  .div_main_second_panel_message_display{
+    width: 55%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .div_main_second_panel_img_display {
+    width: 100%;
+    height: 40%;
+  }
+  .div_main_second_panel_display{
+    height: 170vh;
+  }
+  .div_main_second_panel_message_display{
+    width: 100%;
+  }
+  .div_main_second_panel_img_first{
+    width: 60%;
+    height: 50%;
+  }
+  #main_homepage{
+    height: 250vh;
+  }
+}
+
 
 .div_main_second_panel_message_bg {
   width: 80%;
@@ -381,6 +490,7 @@ main_homepage的css样式设定
 
 .div_main_second_panel_message_p {
   opacity: 0;
+  text-align: left;
 }
 
 .div_main_second_panel_message_p h1 {
@@ -393,13 +503,6 @@ main_homepage的css样式设定
 
 }
 
-.div_main_second_panel_img_first {
-  opacity: 0;
-  width: 100%;
-  height: 80vh;
-  background: var(--color-secondPanel-bg_blue);
-  overflow: hidden;
-}
 
 .animation_main_second_panel_message_bg {
   animation: second_panel_message_show 2s;
@@ -421,66 +524,164 @@ main_homepage的css样式设定
   opacity: 1 !important;
 }
 
-.img_main_second_panel_img_first_start {
-  margin-top: 15px;
-  margin-left: 10px;
-  position: relative;
-  max-width: 100%;
-  width: auto;
-  opacity: 0;
-  display: block;
-}
-
-@media screen and (max-width: 1335px) {
-  .div_main_second_panel_img_display {
-    width: 70vh;
-  }
-
-  .div_main_second_panel_img_first {
-    width: 50%;
-    height: 60vh;
-  }
-
-  .img_main_second_panel_img_first_start {
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 695px) {
-
-}
 
 /*第三页面*/
-.div_main_three_panel_display {
+.div_main_third_panel_display {
   width: 100%;
-  height: 100vh;
-  background: rebeccapurple;
+  height: auto;
+  background: var(--color-musicPanel-bg_black);
 }
 
+.div_main_third_panel_firstP_display{
+}
+.div_main_third_panel_secondP_display{
+}
 
-/*最后页面*/
+.div_main_third_panel{
+  height: 60vh;
+  overflow: hidden;
+}
+.div_main_third_panel_message{
+  margin-top: 5rem;
+  color: var(--color-bg_white);
+}
+.div_main_third_panel_message h1{
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+}
+.div_main_third_panel_message p{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.div_main_third_panel_firstP_img{
+  width: 30%;
+}
+.div_main_third_panel_secondP_img{
+  width: 30%;
+}
+
+.img_main_third_panel_secondP{
+  width: 38vh;
+}
+.img_main_third_panel_firstP{
+  width: 38vh;
+}
+
+@media screen and (max-width: 1550px) {
+  .img_main_third_panel_secondP{
+    width: 24vh;
+  }
+  .img_main_third_panel_firstP{
+    width: 38vh;
+  }
+  .div_main_third_panel_message{
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .div_main_third_panel{
+    height: 55vh;
+  }
+  .div_main_third_panel_message{
+    height: 30vh;
+  }
+  .div_main_third_panel_display{
+    height: 50vh;
+  }
+  .div_main_third_panel_message h1{
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .div_main_third_panel_message p{
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+}
+@media screen and (max-width: 976px) {
+  .div_main_second_panel_message_bg{
+    height: 80vh;
+  }
+  .img_main_third_panel_secondP{
+    width: 24vh;
+  }
+  .img_main_third_panel_firstP{
+    width: 25vh;
+  }
+  .div_main_third_panel_message h1{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .div_main_third_panel_message p{
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .div_main_third_panel_display{
+    height: 110vh;
+  }
+  .div_main_second_panel_message_bg{
+    height: 60vh;
+  }
+  .div_main_second_panel_message_p h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .div_main_second_panel_message_p p {
+    font-size: 17px;
+
+  }
+  .img_main_third_panel_secondP{
+    width: 24vh;
+  }
+  .img_main_third_panel_firstP{
+    width: 38vh;
+  }
+  .div_main_third_panel_message{
+    height: 40vh;
+  }
+
+}
+
+@media screen and (max-width: 380px){
+  .div_main_second_panel_message_p h1 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .div_main_second_panel_message_p p {
+    font-size: 10px;
+  }
+  .div_main_second_panel_message_bg{
+    height: 40vh;
+  }
+  .div_main_second_panel_display{
+    height: 180vh;
+  }
+}
+
+  /*最后页面*/
 .div_main_last_panel_display {
   width: 100%;
-  height: 100vh;
-  background: #2c3e50;
+  height: 70vh;
+  background: var(--color-secondPanel-bg_white);
 }
 
 .input_last_panel_search {
   width: 50vh;
   height: 10vh;
-
-}
-
-.input_last_panel_search {
-  width: 50vh;
-  height: 8vh;
+  border: 1px var(--color-button_color_blue) solid;
 }
 
 .input_last_panel_search:hover {
   transform: scale(1.1);
+  border: 1px var(--color-button_color_blue) solid;
 }
 
 .div_last_panel_title_display {
@@ -495,17 +696,60 @@ main_homepage的css样式设定
 }
 
 .div_last_panel_title h1 {
+  margin-top: 5vh;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  color: var(--color-bg_white);
+  color: var(--color-button_color_blue);
 }
 
 .div_mian_last_panel_footerList_display {
   width: 100%;
   height: 40vh;
-
   position: relative;
 }
-
+.div_main_last_panel_img{
+  float: right;
+  width: 30vh;
+}
+.div_main_last_panel_message_display{
+  width: 500px;
+  text-align: left;
+}
+@media screen and (max-width: 1170px){
+  .div_main_last_panel_display{
+    height: 100vh;
+  }
+  .div_main_last_panel_message_display{
+    width: 50vh;
+    text-align: left;
+  }
+  .div_main_last_panel_img{
+    clear: right;
+    width: 30vh;
+  }
+}
+@media screen and (max-width: 840px){
+  .div_main_last_panel_message_display{
+    font-size: 15px;
+    width: 40vh;
+    text-align: left;
+  }
+  .div_main_last_panel_img{
+    clear: right;
+    width: 20vh;
+  }
+}
+@media screen and (max-width: 547px){
+  .div_main_last_panel_message_display{
+    font-size: 15px;
+    width: 30vh;
+    text-align: left;
+  }
+  .div_main_last_panel_message_display{
+    clear: both;
+    width: 100%;
+    font-size: 1%;
+  }
+}
 </style>

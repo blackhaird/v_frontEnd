@@ -90,6 +90,7 @@ export default {
   /*border: var(--color-font_gray) 1px ;*/
   width: 100%;
   height: 4rem;
+  list-style-type:none;
   color: var(--color-div_white);
 }
 .topSidebar_li_father{
@@ -103,6 +104,7 @@ export default {
   display: none;
   width: 100%;
   height: 4rem;
+  list-style-type:none;
 }
 .topSidebar_li_father:hover .topSidebar_ul_son{
   display: block;

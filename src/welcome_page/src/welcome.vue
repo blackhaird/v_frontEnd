@@ -10,14 +10,13 @@
       <div class="col-3 row" id="div_login">
         <div id="div_message" class="col">
           <div class="row">
-            <img src="./assets/img/logo.png" id="img_logo" class="col">
+            <img src="~@/../public/img/logo.png" id="img_logo" class="col">
           </div>
           <div class="row">
             <h1 class="col">
-              产品设计一体化工具
+              网页在线音乐平台
             </h1>
-            <span>一站式完成白板、原型、设计、交付和管理，把产品设
-            计得更美好</span>
+            <span>网站式音乐平台,无需APP,点击即用。轻便,快捷,多平台适配</span>
           </div>
         </div>
 

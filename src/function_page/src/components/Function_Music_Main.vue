@@ -58,7 +58,7 @@ export default {
     const music_author_name = ref("")
 
     const NeteaseCloudMusicApi_list = ref([]);
-    axios.get("http://localhost:3000/playlist/track/all?id=5403278437&limit=10&offset=1").then(Response => {
+    axios.get("http://localhost:3000/playlist/track/all?id=363365239").then(Response => {
       console.log("请求成功");
       // for (let i = 0; i < Response.data["songs"].length; i++) {
       //   console.log(Response.data["songs"][i])

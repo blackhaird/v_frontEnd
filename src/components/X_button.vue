@@ -12,7 +12,7 @@ export default {
 .X_button_main_css{
   width: 315px;
   height: 60px;
-  background: #5359fd;
+  background: var(--color-button_color_blue);
   font-size: 21px;
   color: white;
   font-family: 小米兰亭;
@@ -22,7 +22,7 @@ export default {
   transition: 0.5s;
 }
 .X_button_main_css:hover{
-  background: #616ffe;
+  background: var(--color-button_color_hover_blue);
 }
 .X_button_main_css:active{
   background: #5359fd;
