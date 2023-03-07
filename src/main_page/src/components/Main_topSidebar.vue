@@ -1,79 +1,65 @@
 <template>
   <ul id="topSidebar_main">
+    <img src="~@/../public/img/logo_white.png" >
     <li class="topSidebar_li_father">
-      栏目1
+      主页
       <ul class="topSidebar_ul_son">
         <li class="topSidebar_li_son">
-          1
+          功能主页
         </li>
         <li class="topSidebar_li_son">
-          2
+          等待更新
         </li>
         <li class="topSidebar_li_son">
-          3
+          等待更新
         </li>
       </ul>
     </li>
     <li class="topSidebar_li_father">
-      栏目2
-
+      更新
       <ul class="topSidebar_ul_son">
         <li class="topSidebar_li_son">
-          1
+          版本说明
         </li>
         <li class="topSidebar_li_son">
-          2
+          功能更新
         </li>
         <li class="topSidebar_li_son">
-          3
+          未来期望
         </li>
       </ul>
     </li>
     <li class="topSidebar_li_father">
-      栏目3
-
+      日志
       <ul class="topSidebar_ul_son">
         <li class="topSidebar_li_son">
-          1
+          每日日志
         </li>
         <li class="topSidebar_li_son">
-          2
+          项目日志
         </li>
         <li class="topSidebar_li_son">
-          3
+          修复日志
         </li>
       </ul>
     </li>
     <li class="topSidebar_li_father">
-      栏目4
-
+      关于我们
       <ul class="topSidebar_ul_son">
         <li class="topSidebar_li_son">
-          1
+          加入我们
         </li>
         <li class="topSidebar_li_son">
-          2
+          版权说明
         </li>
         <li class="topSidebar_li_son">
-          3
+          未来发展
         </li>
       </ul>
     </li>
-    <li class="topSidebar_li_father">
-      栏目5
-
-      <ul class="topSidebar_ul_son">
-        <li class="topSidebar_li_son">
-          1
-        </li>
-        <li class="topSidebar_li_son">
-          2
-        </li>
-        <li class="topSidebar_li_son">
-          3
-        </li>
-      </ul>
-    </li>
+    <div class="topSidebar_name_display ">
+    <p class="topSidebar_name">Welcome you : @XJW</p>
+    </div>
   </ul>
 </template>
 
@@ -92,8 +78,11 @@ export default {
   height: 4rem;
   list-style-type:none;
   color: var(--color-div_white);
+  transition: 0.5s;
+  position:fixed;z-index:999
 }
 .topSidebar_li_father{
+  transition: 0.5s;
   width: 9rem;
   height: 4rem;
   line-height: 4rem;
@@ -106,7 +95,37 @@ export default {
   height: 4rem;
   list-style-type:none;
 }
+.topSidebar_li_son{
+  transition: 0.5s;
+  background: var(--color-topSidebar-li_blue);
+}
 .topSidebar_li_father:hover .topSidebar_ul_son{
   display: block;
+}
+.topSidebar_li_father:hover{
+  background: var(--color-button_color_hover_blue);
+  transform: scale(1.05);
+  cursor:pointer;
+}
+.topSidebar_li_son:hover{
+  background: var(--color-button_color_hover_blue);
+  transform: scale(1.05);
+  margin-left: 20px;
+}
+.topSidebar_name_display{
+  width: 55%;
+  line-height: 60px;
+}
+.topSidebar_name{
+  text-align: right;
+}
+
+@media screen and (max-width: 700px) {
+ .topSidebar_name{
+   display: none;
+ }
+  .topSidebar_li_father{
+    font-size: 12px;
+  }
 }
 </style>

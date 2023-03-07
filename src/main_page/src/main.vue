@@ -6,31 +6,32 @@
   <div>
     <div id="main_homepage">
       <div class="">
-        <Main_topSidebar></Main_topSidebar>
+        <Main_topSidebar :class="{topSidebar_bg_blue:top_sidebar}"></Main_topSidebar>
       </div>
-
       <!--      首页面板-->
       <div class="row div_main_panel">
-
-        <!--网站主页面封面-->
-        <div class="col display_center" id="div_main_message_display">
-          <div id="div_main_message_value">
-            <h1 class="h1_main_message_title_Chinese">网页在线音乐平台</h1>
-            <h3 class="h3_main_message_title_English">Web-based music platform</h3><br>
-            <span class="span_main_message_title_explain">
+        <div class="div_main_panel_display row">
+          <div class="row"></div>
+          <!--网站主页面封面-->
+          <div class="col display_center" id="div_main_message_display">
+            <div id="div_main_message_value">
+              <h1 class="h1_main_message_title_Chinese">网页在线音乐平台</h1>
+              <h3 class="h3_main_message_title_English">Web-based music platform</h3><br>
+              <span class="span_main_message_title_explain">
                           在线音乐作为随身听产品的鼻祖，索尼在被苹果公司以iPod+iTunes软硬件相结合的模式打败后，在2004年也宣布开始Connect在线数字音乐商店，以付费下载数字音乐文件的模式，希望能令其Walkman产品从苹果手中夺回冠军宝座。在当年索尼效仿苹果开始这一服务时，由于其具有20多年音乐随身听的硬件技术基础，加上完整的家电数码产品线，更具备自己的唱片和电影公司，因其综合资源上的优势曾被业界寄予厚望，
             </span><br>
-            <X_button class="div_main_button" style="display: none"></X_button>
+            </div>
           </div>
+          <div class="div_main_button_style row display_none">
+            <X_button class="div_main_button"></X_button>
+          </div>
+          <transition name="div_animation">
+            <div class="col display_center" id="div_main_icon_display">
+              <div class="div_animation" id="div_main_icon"></div>
+            </div>
+          </transition>
         </div>
-
-        <transition name="div_animation">
-          <div class="col display_center" id="div_main_icon_display">
-            <div class="div_animation" id="div_main_icon"></div>
-          </div>
-        </transition>
       </div>
-
       <!--      项目说明面板-->
       <div class="row" ref="main_title">
         <div class="div_main_item_title row" ref="main_item">
@@ -96,10 +97,11 @@
           <div class="div_main_third_panel row">
             <div class="col div_main_third_panel_message ">
               <h1 class="row">华语乐坛</h1>
-              <p class="row">随着中国经济的逐渐强大，富足而安定的生活为中国流行音乐提供了一个良好的温床，有利于我们对西方流行乐的更深层次的理解。使得来至于西方的流行音乐在中国不光是结合了很多的中国特色，中国元素，同时还会有其他国家与民族的音乐灵魂注入，使得中国的流行音乐更加多元化，创造出独具特色的中国流行音乐。</p>
+              <p class="row">
+                随着中国经济的逐渐强大，富足而安定的生活为中国流行音乐提供了一个良好的温床，有利于我们对西方流行乐的更深层次的理解。使得来至于西方的流行音乐在中国不光是结合了很多的中国特色，中国元素，同时还会有其他国家与民族的音乐灵魂注入，使得中国的流行音乐更加多元化，创造出独具特色的中国流行音乐。</p>
             </div>
             <div class="col div_main_third_panel_firstP_img display_center">
-            <img src="./assets/img/main_thirdPanel_Author_first.png" class="img_main_third_panel_firstP col">
+              <img src="./assets/img/main_thirdPanel_Author_first.png" class="img_main_third_panel_firstP col">
             </div>
           </div>
 
@@ -111,7 +113,8 @@
             </div>
             <div class="div_main_third_panel_message col">
               <h1 class="row">欧美乐坛</h1>
-              <p class="row">历史上著名的摇滚歌手和乐队有：甲壳虫乐队(披头士)，滚石乐队，皇后乐队，U2乐队，R.E.M，涅槃乐队，枪炮与玫瑰，Metallica乐队，邦乔维，Suede，老鹰乐队，黑色安息日，齐柏林飞船，平克·弗洛伊德，蝎子乐队，AC/DC，slipknot乐队等。此排名出自CCTV电视指南频道《数字飙榜之欧美十大摇滚乐队》。</p>
+              <p class="row">
+                历史上著名的摇滚歌手和乐队有：甲壳虫乐队(披头士)，滚石乐队，皇后乐队，U2乐队，R.E.M，涅槃乐队，枪炮与玫瑰，Metallica乐队，邦乔维，Suede，老鹰乐队，黑色安息日，齐柏林飞船，平克·弗洛伊德，蝎子乐队，AC/DC，slipknot乐队等。此排名出自CCTV电视指南频道《数字飙榜之欧美十大摇滚乐队》。</p>
             </div>
           </div>
 
@@ -136,14 +139,15 @@
           </div>
         </div>
         <div class="col display_center">
-        <div class="col div_main_last_panel_img_display">
-          <img src="~@/../public/img/logo.png" class="div_main_last_panel_img col">
-        </div>
+          <div class="col div_main_last_panel_img_display">
+            <img src="~@/../public/img/logo.png" class="div_main_last_panel_img col">
+          </div>
         </div>
         <div class="col display_center">
           <div class="div_main_last_panel_message_display">
-            <p>在线音乐作为随身听产品的鼻祖，索尼在被苹果公司以iPod+iTunes软硬件相结合的模式打败后，在2004年也宣布开始Connect在线数字音乐商店，以付费下载数字音乐文件的模式，希望能令其Walkman产品从苹果手中夺回冠军宝座。在当年索尼效仿苹果开始这一服务时，由于其具有20多年音乐随身听的硬件技术基础，加上完整的家电数码产品线，更具备自己的唱片和电影公司，因其综合资源上的优势曾被业界寄予厚望，
-            <br>
+            <p>
+              在线音乐作为随身听产品的鼻祖，索尼在被苹果公司以iPod+iTunes软硬件相结合的模式打败后，在2004年也宣布开始Connect在线数字音乐商店，以付费下载数字音乐文件的模式，希望能令其Walkman产品从苹果手中夺回冠军宝座。在当年索尼效仿苹果开始这一服务时，由于其具有20多年音乐随身听的硬件技术基础，加上完整的家电数码产品线，更具备自己的唱片和电影公司，因其综合资源上的优势曾被业界寄予厚望，
+              <br>
               XJW@2023.3.7
             </p>
           </div>
@@ -180,6 +184,9 @@ export default {
   },
   setup() {
     const currentScroll = ref(0);
+
+    const top_sidebar = ref(false)
+
     const vm = getCurrentInstance();
     const ID_show = ref(false);
 
@@ -192,11 +199,16 @@ export default {
 
     const handleScroll = () => {
       currentScroll.value = window.pageYOffset;
+      console.log(currentScroll.value)
+      if (currentScroll.value <= 900) {
+        top_sidebar.value = false
+      }
+      if (currentScroll.value >= 900) {
+        top_sidebar.value = true
+      }
       if (currentScroll.value >= vm.ctx.$refs.main_item.offsetTop - 800) {
         ID_show.value = true;
       }
-
-
       if (currentScroll.value >= vm.ctx.$refs.second_panel.offsetTop - 500) {
         second_panel_img_div_show.value = true
         second_panel_message_bg_show.value = true
@@ -209,7 +221,7 @@ export default {
 
     const IntroductionDirection_lists = ref([
       {
-        "icon_locate": "@/",
+        "icon_locate": "~@/main_page/src/assets/heads/man1.svg",
         "message": "Gitee 是开源中国社区2013年推出的基于 Git 的代码托管服务，目前已经成为国内最大的代码托管平台，致力于为国内开发者提供优质稳定的托管服务。"
       },
       {
@@ -228,12 +240,12 @@ export default {
 
     const list_footer_message = ref([
       {
-        "title":"音乐平台",
-        "message":["关于我们","联系我们","用户协议","加入我们"]
+        "title": "音乐平台",
+        "message": ["关于我们", "联系我们", "用户协议", "加入我们"]
       },
       {
-        "title":"链接传送",
-        "message":["友情链接","协议汇总","广告合作","社区中心"]
+        "title": "链接传送",
+        "message": ["友情链接", "协议汇总", "广告合作", "社区中心"]
       }
     ])
 
@@ -241,6 +253,9 @@ export default {
       IntroductionDirection_lists,
       currentScroll,
       handleScroll,
+
+      top_sidebar,
+
       ID_show,
 
       second_panel_message_p_show,
@@ -263,12 +278,19 @@ main_homepage的css样式设定
 #main_homepage {
   background: url("~@/../public/img/wave-haikei.svg") no-repeat;
   width: 100%;
-  height: 100vh;
-}
-
-.div_main_panel{
   height: auto;
 }
+
+.div_main_panel {
+  height: auto;
+}
+
+.div_main_panel_display {
+  width: 100%;
+  height: auto;
+  margin-top: 12vh;
+}
+
 #div_main_message_display {
   position: relative;
   width: 100%;
@@ -277,7 +299,7 @@ main_homepage的css样式设定
 
 #div_main_message_value {
   width: 50rem;
-  height: 20rem;
+  height: 30rem;
   text-align: right;
   padding-right: 20px;
   color: var(--color-secondPanel-bg_white);
@@ -295,11 +317,12 @@ main_homepage的css样式设定
   background: url("~@/main_page/src/assets/img/main_mainPanel_icon.svg") no-repeat;
   background-size: 100%;
 }
-.div_main_button{
-  margin-right: 200px;
-  margin-top: 50px;
+
+.div_main_button {
+
   background: var(--color-musicPanel-bgFont_black);
 }
+
 .h1_main_message_title_Chinese {
   text-align: center;
   font-size: var(--fontSize-Main-panel-mainMessageTitle-Chinese);
@@ -383,11 +406,17 @@ main_homepage的css样式设定
   .div_main_ID_involve_display {
     height: 180vh;
   }
+  .div_main_panel_display{
+    height: 170vh;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .div_main_ID_involve_display {
     height: 190vh;
+  }
+  .div_main_last_panel_display{
+    height: 200vh;
   }
 
   .div_main_ID_display {
@@ -445,7 +474,8 @@ main_homepage的css样式设定
   .div_main_second_panel_img_display {
     width: 40%;
   }
-  .div_main_second_panel_message_display{
+
+  .div_main_second_panel_message_display {
     width: 60%;
   }
 }
@@ -454,26 +484,31 @@ main_homepage的css样式设定
   .div_main_second_panel_img_display {
     width: 45%;
   }
-  .div_main_second_panel_message_display{
+
+  .div_main_second_panel_message_display {
     width: 55%;
   }
 }
+
 @media screen and (max-width: 700px) {
   .div_main_second_panel_img_display {
     width: 100%;
     height: 40%;
   }
-  .div_main_second_panel_display{
+  .div_main_second_panel_display {
     height: 170vh;
   }
-  .div_main_second_panel_message_display{
+
+  .div_main_second_panel_message_display {
     width: 100%;
   }
-  .div_main_second_panel_img_first{
+
+  .div_main_second_panel_img_first {
     width: 60%;
     height: 50%;
   }
-  #main_homepage{
+
+  #main_homepage {
     height: 250vh;
   }
 }
@@ -532,102 +567,123 @@ main_homepage的css样式设定
   background: var(--color-musicPanel-bg_black);
 }
 
-.div_main_third_panel_firstP_display{
-}
-.div_main_third_panel_secondP_display{
+.div_main_third_panel_firstP_display {
 }
 
-.div_main_third_panel{
+.div_main_third_panel_secondP_display {
+}
+
+.div_main_third_panel {
   height: 60vh;
   overflow: hidden;
 }
-.div_main_third_panel_message{
+
+.div_main_third_panel_message {
   margin-top: 5rem;
   color: var(--color-bg_white);
 }
-.div_main_third_panel_message h1{
+
+.div_main_third_panel_message h1 {
   font-size: 45px;
   text-align: center;
   font-weight: bold;
 }
-.div_main_third_panel_message p{
+
+.div_main_third_panel_message p {
   font-size: 20px;
   margin-top: 10px;
 }
 
-.div_main_third_panel_firstP_img{
-  width: 30%;
-}
-.div_main_third_panel_secondP_img{
+.div_main_third_panel_firstP_img {
   width: 30%;
 }
 
-.img_main_third_panel_secondP{
+.div_main_third_panel_secondP_img {
+  width: 30%;
+}
+
+.img_main_third_panel_secondP {
   width: 38vh;
 }
-.img_main_third_panel_firstP{
+
+.img_main_third_panel_firstP {
   width: 38vh;
 }
 
 @media screen and (max-width: 1550px) {
-  .img_main_third_panel_secondP{
+  .img_main_third_panel_secondP {
     width: 24vh;
   }
-  .img_main_third_panel_firstP{
+
+  .img_main_third_panel_firstP {
     width: 38vh;
   }
-  .div_main_third_panel_message{
+
+  .div_main_third_panel_message {
     height: 40vh;
   }
 }
+
 @media screen and (max-width: 1220px) {
-  .div_main_third_panel{
+  .div_main_third_panel {
     height: 55vh;
   }
-  .div_main_third_panel_message{
+
+  .div_main_third_panel_message {
     height: 30vh;
   }
-  .div_main_third_panel_display{
+
+  .div_main_third_panel_display {
     height: 50vh;
   }
-  .div_main_third_panel_message h1{
+
+  .div_main_third_panel_message h1 {
     font-size: 27px;
     text-align: center;
     font-weight: bold;
   }
-  .div_main_third_panel_message p{
+
+  .div_main_third_panel_message p {
     font-size: 15px;
     margin-top: 10px;
   }
 
 }
+
 @media screen and (max-width: 976px) {
-  .div_main_second_panel_message_bg{
+  .div_main_second_panel_message_bg {
     height: 80vh;
   }
-  .img_main_third_panel_secondP{
+
+  .img_main_third_panel_secondP {
     width: 24vh;
   }
-  .img_main_third_panel_firstP{
+
+  .img_main_third_panel_firstP {
     width: 25vh;
   }
-  .div_main_third_panel_message h1{
+
+  .div_main_third_panel_message h1 {
     font-size: 25px;
     text-align: center;
     font-weight: bold;
   }
-  .div_main_third_panel_message p{
+
+  .div_main_third_panel_message p {
     font-size: 15px;
     margin-top: 10px;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .div_main_third_panel_display{
+  .div_main_third_panel_display {
     height: 110vh;
   }
-  .div_main_second_panel_message_bg{
+
+  .div_main_second_panel_message_bg {
     height: 60vh;
   }
+
   .div_main_second_panel_message_p h1 {
     font-weight: bold;
     font-size: 30px;
@@ -637,19 +693,22 @@ main_homepage的css样式设定
     font-size: 17px;
 
   }
-  .img_main_third_panel_secondP{
+
+  .img_main_third_panel_secondP {
     width: 24vh;
   }
-  .img_main_third_panel_firstP{
+
+  .img_main_third_panel_firstP {
     width: 38vh;
   }
-  .div_main_third_panel_message{
+
+  .div_main_third_panel_message {
     height: 40vh;
   }
 
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
   .div_main_second_panel_message_p h1 {
     font-weight: bold;
     font-size: 18px;
@@ -658,15 +717,17 @@ main_homepage的css样式设定
   .div_main_second_panel_message_p p {
     font-size: 10px;
   }
-  .div_main_second_panel_message_bg{
+
+  .div_main_second_panel_message_bg {
     height: 40vh;
   }
-  .div_main_second_panel_display{
+
+  .div_main_second_panel_display {
     height: 180vh;
   }
 }
 
-  /*最后页面*/
+/*最后页面*/
 .div_main_last_panel_display {
   width: 100%;
   height: 70vh;
@@ -708,48 +769,78 @@ main_homepage的css样式设定
   height: 40vh;
   position: relative;
 }
-.div_main_last_panel_img{
+
+.div_main_last_panel_img {
   float: right;
   width: 30vh;
 }
-.div_main_last_panel_message_display{
+
+.div_main_last_panel_message_display {
   width: 500px;
   text-align: left;
 }
-@media screen and (max-width: 1170px){
-  .div_main_last_panel_display{
+
+@media screen and (max-width: 1170px) {
+  .div_main_last_panel_display {
     height: 100vh;
   }
-  .div_main_last_panel_message_display{
+
+  .div_main_last_panel_message_display {
     width: 50vh;
     text-align: left;
   }
-  .div_main_last_panel_img{
-    clear: right;
+
+  .div_main_last_panel_img {
+    clear: both;
     width: 30vh;
   }
 }
-@media screen and (max-width: 840px){
-  .div_main_last_panel_message_display{
+
+@media screen and (max-width: 840px) {
+  .div_main_last_panel_message_display {
     font-size: 15px;
     width: 40vh;
     text-align: left;
   }
-  .div_main_last_panel_img{
-    clear: right;
+
+  .div_main_last_panel_img {
+    clear: both;
     width: 20vh;
   }
 }
-@media screen and (max-width: 547px){
-  .div_main_last_panel_message_display{
+
+@media screen and (max-width: 547px) {
+  .div_main_last_panel_message_display {
     font-size: 15px;
     width: 30vh;
     text-align: left;
   }
-  .div_main_last_panel_message_display{
+  .div_main_last_panel_display {
+    height: 130vh;
+  }
+
+  .div_main_last_panel_message_display {
     clear: both;
     width: 100%;
     font-size: 1%;
+  }
+}
+@media screen and (max-width: 643px) {
+  .div_main_last_panel_img{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 547px) {
+  .div_main_last_panel_img{
+    width: 100%;
+  }
+  .div_main_last_panel_img_display{
+  }
+  .div_main_last_panel_message_display{
+    width: 30vh;
+  }
+  .div_main_last_panel_display {
+    height:100vh;
   }
 }
 </style>

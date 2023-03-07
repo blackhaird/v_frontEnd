@@ -85,3 +85,11 @@
     transform: translateY(10%);
     opacity: 0;
 }
+
+.topSidebar_bg_blue{
+    background: var(--color-button_color_blue);
+    box-shadow: var(--color-topSidebar-shadow_blue) 10px 5px 30px 1px;
+}
+.topSidebar_bg_none{
+    background: none;
+}

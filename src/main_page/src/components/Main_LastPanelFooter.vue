@@ -49,9 +49,10 @@ export default {
   color: #5359fd;
 }
 .div_MLPF_display h3{
-  text-align: center;
+  font-size: 25px;
   color: var(--color-font_black);
-  margin: 20px;
+  margin-left: 35px;
+
   font-weight: bold;
 }
 .div_MLPF_display li {

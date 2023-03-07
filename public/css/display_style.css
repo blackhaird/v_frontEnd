@@ -25,6 +25,10 @@ body{
     align-items: center;
 }
 
+.display_none{
+    display: none;
+}
+
 
 .test_box{
     width: 500px;

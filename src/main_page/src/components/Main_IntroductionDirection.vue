@@ -2,7 +2,11 @@
   <div class="div_mainID_display row-col display_center">
     <transition name="panel_animation">
     <div class="div_mainID_panel panel_animation row">
-      <div class="div_mainID_panel_icon row"></div>
+      <div class="div_mainID_panel_icon row">
+<!--        <img :src="require('@/main_page/src/assets/heads/man1.svg')">-->
+        <img :src="require('@/main_page/src/assets/heads/man1.svg')">
+        {{img}}
+      </div>
       <div class="dic_mainID_panel_message row">
         {{message_txt}}
       </div>
@@ -12,6 +16,7 @@
 </template>
 
 <script>
+import {ref} from "vue";
 export default {
   name: "Main_IntroductionDirection",
   props:{
@@ -23,8 +28,9 @@ export default {
     }
   },
   setup(){
+    const img = ref("@/main_page/src/assets/heads/man1.svg")
     return{
-
+      img
     }
   }
 }
