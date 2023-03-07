@@ -6,11 +6,11 @@
       <X_input :input-value="inputValue_userid"></X_input>
 
       <span class="row">
-              <a class="col" @click="">忘记密码</a>
+              <a class="col">忘记密码</a>
               <a class="col" @click="changePanel_to_register">注册账号</a>
             </span><br><br>
 
-      <X_button class="col"></X_button>
+      <X_button class="col" ></X_button>
     </div>
 </template>
 

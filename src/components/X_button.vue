@@ -1,5 +1,5 @@
 <template>
-  <button class="X_button_main_css">按钮</button>
+  <button class="X_button_main_css">确认</button>
 </template>
 
 <script>

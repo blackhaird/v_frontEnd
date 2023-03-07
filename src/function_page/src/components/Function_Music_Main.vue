@@ -5,6 +5,9 @@
         <h1>音乐<span>歌单</span></h1>
         <h2>Music <span>playlist</span></h2>
       </div>
+      <div class="col">
+
+      </div>
 
       <div class="col" style="text-align: right;line-height:100px;font-weight: bold">
         <span>Welcome you</span>: @XJW</div>

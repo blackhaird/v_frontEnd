@@ -3,9 +3,7 @@
     <transition name="panel_animation">
     <div class="div_mainID_panel panel_animation row">
       <div class="div_mainID_panel_icon row">
-<!--        <img :src="require('@/main_page/src/assets/heads/man1.svg')">-->
-        <img :src="require('@/main_page/src/assets/heads/man1.svg')">
-        {{img}}
+        <img :src="require('@/main_page/src/assets/heads/'+icon_locate)">
       </div>
       <div class="dic_mainID_panel_message row">
         {{message_txt}}
@@ -16,7 +14,7 @@
 </template>
 
 <script>
-import {ref} from "vue";
+
 export default {
   name: "Main_IntroductionDirection",
   props:{
@@ -28,9 +26,8 @@ export default {
     }
   },
   setup(){
-    const img = ref("@/main_page/src/assets/heads/man1.svg")
     return{
-      img
+
     }
   }
 }
@@ -56,10 +53,12 @@ export default {
   box-shadow: var(--color-box-shadow_blue) 15px 5px 20px 3px;
 }
 .div_mainID_panel_icon{
-  width: 90px;
+  width: 180px;
   height: 90px;
-  background: fuchsia;
   margin-top: 2rem;
+}
+.div_mainID_panel_icon img{
+  width: 150%;
 }
 .dic_mainID_panel_message{
   width: 20rem;
@@ -90,12 +89,15 @@ export default {
 
 @media screen and (max-width: 695px){
   .div_mainID_panel{
-    max-width: 50vh;
-    height:18vh;
+    max-width: 45vh;
+    height:27vh;
     padding-left:  10px;
   }
+  .div_mainID_panel_icon{
+    width: 150px;
+  }
   .div_mainID_display{
-    height: 25vh;
+    height: 30vh;
   }
   .dic_mainID_panel_message{
     display: flex;
@@ -114,7 +116,6 @@ export default {
   .div_mainID_display{
     height: 40vh;
   }
-
 }
 @media screen and (max-width: 375px){
   .div_mainID_panel{

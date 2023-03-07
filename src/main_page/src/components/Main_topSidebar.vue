@@ -4,7 +4,7 @@
     <li class="topSidebar_li_father">
       主页
       <ul class="topSidebar_ul_son">
-        <li class="topSidebar_li_son">
+        <li class="topSidebar_li_son" @click="go_to">
           功能主页
         </li>
         <li class="topSidebar_li_son">
@@ -65,7 +65,15 @@
 
 <script>
 export default {
-  name: "Main_topSidebar"
+  name: "Main_topSidebar",
+  setup(){
+    const go_to = ()=>{
+      window.location.href = "/function_page"
+    }
+    return{
+      go_to
+    }
+  }
 }
 </script>
 

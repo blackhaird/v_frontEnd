@@ -12,7 +12,7 @@
               <a class="col" @click="changePanel_to_register">注册账号</a>
             </span><br><br>
     <!--            <span class="col double_ended_line ">点击</span><br><br>-->
-    <X_button class="col"></X_button>
+      <X_button class="col" @click="go_to"></X_button>
   </div>
   </transition>
 </template>
@@ -36,11 +36,14 @@ export default {
       console.log("changePanel_to_register 函数被触发")
       context.emit('registerPanel_show',true)
     }
-
+    const go_to = ()=>{
+      window.location.href = "/main_page"
+    }
     return{
       inputValue_userid,
       inputValue_password,
-      changePanel_to_register
+      changePanel_to_register,
+      go_to
     }
   }
 }

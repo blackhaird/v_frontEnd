@@ -73,8 +73,8 @@
             <div class="div_main_second_panel_message_bg"
                  :class="{animation_main_second_panel_message_bg:second_panel_message_bg_show}">
               <div class="div_main_second_panel_message_p"
-                   :class="{animation_main_second_panel_message_p:second_panel_message_p_show}"><h1 class="row">
-                音乐随时享受</h1>
+                   :class="{animation_main_second_panel_message_p:second_panel_message_p_show}">
+                <h1 class="row">音乐随时享受</h1>
                 <p class="row">
                   在线音乐是通过互联网传输和播放的音乐。它可以通过各种方式访问，例如流媒体服务、数字音乐下载、<br>
                   在线广播和社交媒体平台等。<br>
@@ -221,20 +221,20 @@ export default {
 
     const IntroductionDirection_lists = ref([
       {
-        "icon_locate": "~@/main_page/src/assets/heads/man1.svg",
-        "message": "Gitee 是开源中国社区2013年推出的基于 Git 的代码托管服务，目前已经成为国内最大的代码托管平台，致力于为国内开发者提供优质稳定的托管服务。"
+        "icon_locate": "network.svg",
+        "message": "随时享受是MusicOnline的宗旨，以网络作为数据传输的通道，随时随地的享受音乐。本网站建立之初就以云端服务作为主要内容，主打轻量化与多端可用，极大的促成用户的轻量化与便利性。"
       },
       {
-        "icon_locate": "@/",
-        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+        "icon_locate": "service.svg",
+        "message": "社交方便是MusicOnline的理想,让用户可用在网络上分享音乐，简便的分享与讨论。本网站一直以轻量化分享为基准，无需用户下载APP，点击链接即可完成分享"
       },
       {
-        "icon_locate": "@/",
-        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+        "icon_locate": "safety.svg",
+        "message": "信息安全是MusicOnline的安全，用户没有任何隐私性的内容输入到本网站，我们也只需要用户的基础数据，用户也没有任何信息存在于我们的服务器上，网络攻击不会对用户有所影响"
       },
       {
-        "icon_locate": "@/",
-        "message": "GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。2022年4月13日起，GitHub 开始封锁受美国制裁公司的俄罗斯开发者账户。"
+        "icon_locate": "money.svg",
+        "message": "减少开支是MusicOnline的底线，我们不需要用户支付大量的费用，MusicOnline的想法是让用户用最小的支出换得最大的体验。甚至我们的想法是做到用户免费就可以使用我们的功能"
       }
     ])
 
@@ -390,7 +390,7 @@ main_homepage的css样式设定
 @media screen and (max-width: 695px) {
 
   .div_main_ID_display {
-    height: 110vh;
+    height: 120vh;
   }
 
   .div_main_ID_involve_display {
@@ -705,6 +705,9 @@ main_homepage的css样式设定
   .div_main_third_panel_message {
     height: 40vh;
   }
+  .div_main_third_panel_message p{
+    font-size: 12px;
+  }
 
 }
 
@@ -713,7 +716,6 @@ main_homepage的css样式设定
     font-weight: bold;
     font-size: 18px;
   }
-
   .div_main_second_panel_message_p p {
     font-size: 10px;
   }
@@ -725,6 +727,7 @@ main_homepage的css样式设定
   .div_main_second_panel_display {
     height: 180vh;
   }
+
 }
 
 /*最后页面*/
@@ -824,6 +827,7 @@ main_homepage的css样式设定
     width: 100%;
     font-size: 1%;
   }
+
 }
 @media screen and (max-width: 643px) {
   .div_main_last_panel_img{

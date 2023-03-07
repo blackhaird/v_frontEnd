@@ -9,7 +9,7 @@
     <X_input :input-value="inputValue_password_again"></X_input>
     <br><br>
     <span class="row">
-              <a class="col" href="">忘记密码</a>
+              <a class="col" href=""></a>
               <a class="col" @click="changePanel_to_login">返回登录</a>
             </span><br><br>
     <!--            <span class="col double_ended_line ">点击</span><br><br>-->

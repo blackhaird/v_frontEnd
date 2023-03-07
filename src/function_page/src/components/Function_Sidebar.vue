@@ -2,7 +2,7 @@
   <div class="div_function_Sidebar_main_display ">
     <div class="div_function_Sidebar_main_li_display ">
       <ul>
-          <li v-for="item in lists_item" v-bind:key="item">
+          <li v-for="item in lists_item" v-bind:key="item" @click="go_to(item)">
             <p>{{ item["title_zh"] }}</p>
             <span>{{ item["title_en"] }}</span></li>
       </ul>
@@ -12,6 +12,8 @@
 
 <script>
 
+import {toRefs} from "vue";
+
 export default {
   name: "Function_Sidebar",
   props: {
@@ -19,8 +21,17 @@ export default {
       type: Array
     }
   },
-  setup() {
-    return {}
+  setup(props) {
+    const p = toRefs(props)
+    const go_to = (item)=>{
+      if (item["title_en"]==="WEBSITE"){
+        window.location.href = "/main_page"
+      }
+    }
+    return {
+      p,
+      go_to
+    }
   }
 }
 </script>
