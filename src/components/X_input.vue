@@ -44,7 +44,6 @@ input:focus {
   border-radius: 7px;
   border: 0;
   transition: 0.3s;
-
 }
 .X_input_main_css:hover{
   background: #f3f3f4;

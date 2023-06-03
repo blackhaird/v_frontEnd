@@ -1,8 +1,12 @@
 <template>
+<!--  使用网格布局，实现组件的自定义-->
   <div class="div_function_main_display row">
     <div class="div_function_sidebar_display col-lg-2">
+<!--      使用vue的组件化，使得每个组件的更加清晰（此处是侧边栏组件）-->
       <Function_Sidebar :lists_item="sidebar_list"></Function_Sidebar>
     </div>
+<!--    row对于组件实现分行布局，col对组件实现分列布局-->
+<!--    在col中，若剩余空间不足以容下组件的大小，会使其挤压到下一行-->
     <div class="div_function_function_panel_display col">
       <Function_Music_Main></Function_Music_Main>
     </div>

@@ -18,8 +18,13 @@ module.exports = defineConfig({
             entry:'src/function_page/src/function.js',
             template:'public/function.html',
             filename:'function.html'
-        }
+        },
 
+        rotation_page:{
+            entry:'src/rotation_page/src/rotation.js',
+            template:'public/rotation.html',
+            filename:'rotation.html'
+        }
     },
 
 })

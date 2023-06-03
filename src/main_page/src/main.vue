@@ -8,7 +8,7 @@
       <div class="">
         <Main_topSidebar :class="{topSidebar_bg_blue:top_sidebar}"></Main_topSidebar>
       </div>
-      <!--      首页面板-->
+      <!--      首页面板 引用了网格布局实现自适应布局-->
       <div class="row div_main_panel">
         <div class="div_main_panel_display row">
           <div class="row"></div>
@@ -782,7 +782,7 @@ main_homepage的css样式设定
   width: 500px;
   text-align: left;
 }
-
+/*板块自适应功能*/
 @media screen and (max-width: 1170px) {
   .div_main_last_panel_display {
     height: 100vh;
